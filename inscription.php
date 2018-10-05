@@ -7,22 +7,35 @@
 </head>
 <body>
 	<div id="bloc_page">
-	<?php include("header.php"); ?>
+	<!--<?php include("header.php"); ?> -->
+	<div id="titre_principal_inscription">
 	<h1>
 		Bienvenue sur la page d'inscription.
-		Remplis les champs correctement et tout se passera bien ! 
+		
 	</h1>
 	<br>
-	<h2> A très vite sur notre site ! </h2>
+	<h2>
+		Remplissez correctement les champs et vous pourrez rapidement consulter notre catalogue de bouteille d'eau !
+	</h2>
+	</div>
 	<br>
-
-	<div id="formulaire_connexion">
+	<div id="second_titre">
+	<h2> A très vite sur notre site ! </h2>
+</div>
+	<br>
+	<div id="logo">
+                    <img src="pictures/inscription_logo.jpg" alt="Logo d'inscription" />   
+                    </div>
+                    <br>
+                    <br>          
+			
+	<div id="formulaire_inscription">
 		<form method="post" action="inscription.php">
 					<h2>Rentrez vos coordonnées</h2>
 				<p>
-					<p>Entre ton Pseudo</p> <input type="text" name ="userName" placeholder="userName" />
-					<p>Entre ton mot de passe</p><input type="password" name="mot_de_passe" placeholder="mot de passe" />
-					<p>Entre ton adresse mail</p><input type="text" name="adresse_mail" placeholder="adresse mail">
+					<p>Entrez votre Pseudo</p> <input type="text" name ="userName" placeholder="userName" />
+					<p>Entrez votre mot de passe</p><input type="password" name="mot_de_passe" placeholder="mot de passe" />
+					<p>Entrez votre adresse mail</p><input type="text" name="adresse_mail" placeholder="adresse mail">
 					<input type="submit" value="valider"/>
 
 				</p>
@@ -36,7 +49,7 @@
   				header('Location: signin.php');
   				exit();
 						?>
-
+					
            		<?php
            	}
            	
@@ -44,22 +57,14 @@
 
            	{
 
-           		echo  "Inscrivez-vous correctement pour gagner du temps." ;
+           		echo "Attention, votre mot de passe ne doit contenir que des minuscules, aucun chiffre ou autre caractère spécial, merci." ;
 
-           	} ?>
+           	} ?> 
+           	<br>
+           	<br>
+           	<?php include("footer.php"); ?>
 
-
-
-	<!--	<?php 
-           if(isset($_POST['userName']) AND isset($_POST['mot_de_passe']) AND isset($_POST['adresse_mail'])) { 
-           	?> 
-           	<?php 
-           	header('Location: signin.php');
-  				exit(); 
-  				
-           	 }  ?> -->
-
-	</div>
+	
 </div>
 </body>
 </html>
