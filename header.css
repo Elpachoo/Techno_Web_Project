@@ -1,0 +1,28 @@
+header
+{
+	background-color: #D4F2FF;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.MenuCategory
+{
+	float: left;
+	padding: 10px;
+	position: middle;
+	box-sizing: border-box;
+}
+
+.iconIMG
+{
+	width: 30px;
+	float: left;
+	margin: 5px;
+}
+
+.icon
+{
+	top: 80px;
+}
