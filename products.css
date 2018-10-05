@@ -1,0 +1,82 @@
+
+body{
+	font-family:"Arial";
+}
+
+nav {
+    text-align: center;
+     background-color: rgb(142, 212, 232);
+    padding: 0;
+    margin: 5px;
+    border-radius: 5px 5px;
+}
+section{float: left;
+ background-color: rgb(252, 254, 255);
+}
+
+
+.menuCategory {
+    display: inline-block;
+    position:relative;
+    padding:5px 10px;
+
+}
+.rowPlates{
+	float: left;}
+.rowGazeuses{
+	float: left;}
+.rowSucree{
+	float: left;}
+
+#containerPlates{
+	 display: inline-block;
+     
+}
+#containerGazeuses{
+	 display: inline-block;
+    
+}
+#containerSucre{
+	 display: inline-block;
+     
+}
+
+.produitPlate{float: left;}
+	
+.produitGazeuse{float: left;}
+	
+.produitsucree{ float: left;}
+	
+
+.price{
+	text-align: center;
+	
+	color :black ;
+	font-weight:bold;
+}
+.panier{
+	text-align: center;
+	margin-top: 0px;
+
+}
+h1{
+	font-size: 50px;
+	color :rgb(55, 38, 110) ;
+}
+h4{
+	color :rgb(151, 170, 179) ;
+}
+
+h1,h4{
+	text-align: center;
+	margin-top: 0px;
+	
+
+}
+
+
+
+
+
+
+
