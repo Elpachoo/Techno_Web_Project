@@ -1,0 +1,27 @@
+body{
+    background: rgb(252,254,255);
+}
+
+#searchbar{
+    position:relative;
+    width:1040px;
+    height:auto;
+    display:inline-block;
+}
+#searchbar .text{
+    width:300px;
+    float:left;    
+}
+#searchbar .champ{
+    width:600px;
+    height:35px;
+    float:left;
+}
+#searchbar .bouton{
+    background-image: url(https://www.google.fr/search?q=search+bar+button&tbm=isch&tbs=rimg:CR8o18JelpPnIjiq5VamG4KkQGjvaE88UsvtLh7b65RH_1xPsDjtoWNpeVLWSoXt5aveYLRW1uZqkjpuxH7-eLNtc5yoSCarlVqYbgqRAEdQ424h7xOR6KhIJaO9oTzxSy-0RuY8wU-bUxcIqEgkuHtvrlEf_1ExHGi0BkKUHuqCoSCewOO2hY2l5UETQUsYWP_1zFcKhIJtZKhe3lq95gRGCeJR9NYgkoqEgktFbW5mqSOmxH7IfRmvsNPGyoSCbEfv54s21znETScH0LLLPoj&tbo=u&sa=X&ved=2ahUKEwj8iIGEru_dAhUGbVAKHYS9DUgQ9C96BAgBEBg&biw=1422&bih=684&dpr=1.35#imgrc=HyjXwl6Wk-cEmM:);
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border:none;
+    float:left;
+}
