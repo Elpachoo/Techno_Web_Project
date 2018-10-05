@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="bloc_page">
-	<!--<?php include("header.php"); ?> -->
+	<?php include("header.php"); ?> 
 	<div id="titre_principal_inscription">
 	<h1>
 		Bienvenue sur la page d'inscription.

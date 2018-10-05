@@ -7,7 +7,7 @@
 	</head>
 	<body>
 
-    <!--<?php include("header.php"); ?> -->
+    <?php include("header.php"); ?>
     	<h1 id="titre_connexion"> Bienvenue sur la page de connexion ! </h1>
     	<br>
     	<br>
