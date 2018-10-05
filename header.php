@@ -1,7 +1,7 @@
 <header>
 	<link rel="stylesheet" type="text/css" href="header.css">
 	<a href="home.php">
-		<img src="http://bluefaqs.com/wp-content/uploads/2010/07/water-color-step-5-b.jpg">
+		<img src="pictures/WaterLife.png" id="Logo">
 	</a>
 
 	<nav>
