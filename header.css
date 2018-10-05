@@ -1,10 +1,10 @@
 header
 {
 	background-color: #D4F2FF;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
+	display: block;
+	max-width:100%;
+    max-height: calc(100vh - 150px);
+    margin: 5px auto;
 }
 
 #Logo
