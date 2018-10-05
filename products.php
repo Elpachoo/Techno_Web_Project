@@ -6,7 +6,7 @@
 </head>
 <body>
 	<header>
-		<!-- Contient 6 produits <?php include('header.php'); ?>-->
+		<?php include('header.php'); ?>
 	</header>
 
     
