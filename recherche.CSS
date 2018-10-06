@@ -1,7 +1,20 @@
 body{
     background: rgb(252,254,255);
+    font-family: 'Trebuchet MS', Arial;
+    color: #181818;
 }
-
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+ h1
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0 0 0 200px;
+}
 #searchbar{
     position:relative;
     width:1040px;
@@ -9,19 +22,55 @@ body{
     display:inline-block;
 }
 #searchbar .text{
-    width:300px;
-    float:left;    
+    width:150px;
+    float:left; 
+    font-size: 1.2em;   
 }
 #searchbar .champ{
+    font-family: 'BallparkWeiner', ;
+    font-size: 1.5em;
+    font-weight: normal;
     width:600px;
     height:35px;
     float:left;
+    margin: 0 0 0 0px;
 }
+h2
+{
+    font-family: 'BallparkWeiner', ;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    /*flex-direction: column;
+    margin: 0 0 0 320px;*/
+}
+/*#searchbar 
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 1.5em;
+    font-weight: normal;
+    flex-direction: column;
+    margin: 0 0 0 250px;
+}*/
 #searchbar .bouton{
-    background-image: url(https://www.google.fr/search?q=search+bar+button&tbm=isch&tbs=rimg:CR8o18JelpPnIjiq5VamG4KkQGjvaE88UsvtLh7b65RH_1xPsDjtoWNpeVLWSoXt5aveYLRW1uZqkjpuxH7-eLNtc5yoSCarlVqYbgqRAEdQ424h7xOR6KhIJaO9oTzxSy-0RuY8wU-bUxcIqEgkuHtvrlEf_1ExHGi0BkKUHuqCoSCewOO2hY2l5UETQUsYWP_1zFcKhIJtZKhe3lq95gRGCeJR9NYgkoqEgktFbW5mqSOmxH7IfRmvsNPGyoSCbEfv54s21znETScH0LLLPoj&tbo=u&sa=X&ved=2ahUKEwj8iIGEru_dAhUGbVAKHYS9DUgQ9C96BAgBEBg&biw=1422&bih=684&dpr=1.35#imgrc=HyjXwl6Wk-cEmM:);
     width: 35px;
     height: 35px;
     padding: 0;
     border:none;
     float:left;
 }
+/*footer
+{
+    flex-direction: row;
+    display: flex;
+    padding-right: 0px;
+    margin: 0 0 0 0px;
+}
+footer h1
+{
+    font-size: 1.5em;
+
+    font-family: 'BallparkWeiner', ;
+    font-weight: normal;
+    margin: 0 0 0 100px;
+}*/
