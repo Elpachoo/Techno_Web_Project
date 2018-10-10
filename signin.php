@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title> Page de connexion !! </title>
-		<link rel="stylesheet" type="text/css" href="style.css"> 
+		<link rel="stylesheet" type="text/css" href="signin_inscription_footer.css"> 
 	</head>
 	<body>
 

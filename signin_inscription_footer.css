@@ -19,6 +19,14 @@ h1
     margin: 0 0 0 0px;
 }
 
+#titre_connexion
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 300px;   
+}
+
 #message_indication
 {
     font-family: 'BallparkWeiner', ;
@@ -28,6 +36,13 @@ h1
 }
 
 
+/*h2
+{
+    font-family: 'Arial';
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}*/
 
 /* Formulaire inscription et formulaire connexion */
 
@@ -62,14 +77,6 @@ h1
 }
 
 /* Titres de mes fichiers */
-
-#titre_connexion
-{
-    font-family: 'BallparkWeiner', ;
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 300px;   
-}
 
 #titre_principal_inscription h1
 {
