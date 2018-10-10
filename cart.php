@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>My Cart</title>
-	<link rel="stylesheet" type="text/css" href="cart.css">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
 </head>
 <header>
 	<?php include 'header.php' ?>
