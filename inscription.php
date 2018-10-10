@@ -3,7 +3,11 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Bienvenue, inscrivez vous !</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="signin_inscription_footer.css" />
+=======
+	<link rel="stylesheet" href="css/style.css" />
+>>>>>>> Step1
 </head>
 <body>
 	<div id="bloc_page">
