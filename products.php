@@ -45,10 +45,9 @@
 
             <div class="produit">
               <div class=image>
+                  <img src="pictures/cristaline.png" alt="Product" />
                  <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
               </div>
-              <img src="pictures/cristaline.png" alt="Product" />
-              <div class="legende"> legende volvic</div>
               <h4> Cristaline </h4>
               <div class="price"> 2.70€  <br> </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -56,8 +55,10 @@
             </div>
 
             <div class="produit">
-              <img src="pictures/evian.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+              <div class=image> 
+                <img src="pictures/evian.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+              </div>
               <h4> Evian </h4>
               <div class="price"> 20€  <br> </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -65,8 +66,10 @@
             </div>
 
             <div class="produit">
-              <img src="pictures/contrex.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                <img src="pictures/contrex.png" alt="Product" />
+                  <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>     
               <h4> Contrex </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -78,24 +81,30 @@
 
           <div class="row">
             <div class="produit">
-              <img src="pictures/plancoet2.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                 <img src="pictures/plancoet2.png" alt="Product" />
+                  <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>
               <h4> Plancoet </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
             </div>
 
              <div class="produit">
-              <img src="pictures/vittel.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image> 
+                <img src="pictures/vittel.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+               </div>
               <h4> Vittel </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
             </div>
 
             <div class="produit">
-              <img src="pictures/hepart.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                 <img src="pictures/hepart.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>
               <h4> Hepart </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -117,8 +126,10 @@
           <div class="row">
 
             <div class="produit">
-              <img src="pictures/perrier.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                 <img src="pictures/perrier.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>
               <h4> Perrier </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -126,8 +137,10 @@
             </div>
           
             <div class="produit">
-              <img src="pictures/badoit.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                <img src="pictures/badoit.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>
               <h4> Badoit </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -135,8 +148,10 @@
             </div>
           
             <div class="produit">
-              <img src="pictures/saintamand.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                <img src="pictures/saintamand.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>   
               <h4> Saint-Amand </h4>
               <div class="price"> 20€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -158,8 +173,10 @@
         
           <div class="row">
             <div class="produit">
-              <img src="pictures/volvicfraise.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image> 
+                <img src="pictures/volvicfraise.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>           
+               </div>
               <h4> Volvic Fraise </h4>
               <div class="price"> 4€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -167,8 +184,10 @@
             </div>
                     
             <div class="produit">
-              <img src="pictures/volviccitron.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                <img src="pictures/volviccitron.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>         
+                </div>
               <h4> Volvic Citron </h4>
               <div class="price"> 4€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -176,8 +195,10 @@
             </div>
                    
             <div class="produit">
-              <img src="pictures/volvicthe.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image> 
+                 <img src="pictures/volvicthe.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+               </div>
               <h4> Volvic The </h4>
               <div class="price"> 6€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -197,8 +218,10 @@
           <div class="row">
 
             <div class="produit">
-              <img src="pictures/gota.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image>
+                <img src="pictures/gota.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+                </div>
               <h4> Gota </h4>
               <div class="price"> 150€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -206,8 +229,10 @@
             </div>
           
             <div class="produit">
-              <img src="pictures/icelandic.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image> 
+                 <img src="pictures/icelandic.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>             
+               </div>             
               <h4> Ice Landic </h4>
               <div class="price"> 179€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
@@ -215,8 +240,10 @@
             </div>
           
             <div class="produit">
-              <img src="pictures/blingh2o.png" alt="Product" />
-               <div class="legende"> legende volvic</div>
+               <div class=image> 
+                <img src="pictures/blingh2o.png" alt="Product" />
+                 <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div> 
+               </div> 
               <h4> Bling H2O </h4>
               <div class="price"> 70€ </div>
               <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>

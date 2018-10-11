@@ -68,7 +68,12 @@ li a:hover {
 }
 
 .legende{
-	display:  none;
+	display: none;
+	transition-property: color, width, height;
+	transition-duration: 2s;
+	height: 100px;
+	width: 200px ;
+
 
 	}
 
@@ -77,15 +82,16 @@ li a:hover {
 }	
 
 
+.image:hover .legende {
 
-.image:hover .legende{
 	display: inline-block;
 	position: absolute;
-	background-color: yellow;
-	height: 100px; width: 200px ;
+	height: 300px;
+	 width: 300px ;
 	text-align: center;
 	background-color: #e7e7e7;
 }
+
 
 .row{
 	display:  flex;
