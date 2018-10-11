@@ -1,28 +1,15 @@
 <header>
 	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<a href="home.php">
-		<img src="pictures/WaterLife.png" id="Logo">
-	</a>
-
-	<nav>
+	<div class="header">
+		<div class="logo_div">
+			<a href="home.php" class="titre"><span>W A T E R &nbsp;&nbsp;&nbsp; L I F E</span></a>
+		</div>
 		<div class="MenuCategory">
-			<a href="home.php">HOME</a>
+			<a class="SousMenu" href="home.php"><span>HOME</span></a>
+			<a class="SousMenu" href="products.php"><span>PRODUCTS</span></a>
+			<a class="SousMenu" href="recherche.php"><span>SEARCH</span></a>
+			<a class="SousMenu" href="cart.php"><span>CART</span></a>
+			<a class="SousMenu" href="signin.php"><span>MY ACCOUNT</span></a>
 		</div>
-
-		<div class="MenuCategory">
-			<a href="home.php">PRODUCTS</a>
-		</div>
-
-		<div class="icon" id="Search">
-			<a href="search-products.php"><img src="https://cdn1.iconfinder.com/data/icons/free-98-icons/32/search-128.png" class="iconIMG"></a>
-		</div>
-
-		<div class="icon" id="Cart">
-			<a href="cart.php"><img src="https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Cart-128.png" class="iconIMG"></a>
-		</div>
-
-		<div class="icon" id="MyAccount">
-			<a href="signin.php"><img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-128.png" class="iconIMG"></a>
-		</div>
-	</nav>
+	</div>
 </header>

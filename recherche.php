@@ -62,8 +62,8 @@ catch(Exception $e)
 $req->closeCursor(); // Termine le traitement de la requête
 }
 ?>
-        ?>        
+     
 	</div>
-
 </body>
+<?php include('footer.php') ?>
 </html>
