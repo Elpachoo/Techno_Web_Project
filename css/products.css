@@ -1,41 +1,91 @@
 @font-face {
     font-family: 'SoftLine';
-    src: url('SoftLine.eot') format('eot');
+    src: url('SoftLine.otf') ;
+}
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('CaviarDreams.ttf') ;
+}
+@font-face {
+    font-family: 'CaviarDreams_Bold';
+    src: url('CaviarDreams_Bold.ttf') ;
 }
 
+
 body{
-	font-family:"Arial";	
+	font-family:"CaviarDreams";	
 }
 
 
 nav {
-    text-align: center;
-    background-color: rgb(142, 212, 232);
     padding: 0;
-    margin: 5px;
+    margin: 4px;
     border-radius: 5px 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+     z-index: 1; /*pr placer tout au dessus*/
 }
 section{
 	background-color: rgb(252, 254, 255);
 }
+
 img{
 	display: block;
 	max-height:400px;
 	max-width:300px;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
+}
+img:hover{
+	opacity: 0.7;
 	
-
 }
 
-
-.menuCategory {
-    display: inline-block;
-    position:relative;
-    padding:5px 10px;
+ul {
+   	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'CaviarDreams_Bold';
+   
+}
+li {
+   float: left;
 
 }
+li a {
+	 display: inline;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
 
+.legende{
+	display:  none;
+
+	}
+
+.produit {
+	
+}	
+
+
+
+.image:hover .legende{
+	display: inline-block;
+	position: absolute;
+	background-color: yellow;
+	height: 100px; width: 200px ;
+	text-align: center;
+	background-color: #e7e7e7;
+}
 
 .row{
 	display:  flex;
@@ -45,8 +95,7 @@ img{
 .price{
 	text-align: center;
 	color:black ;
-	font-weight:bold;
-	font-family: sans-serif;
+	font-family: 'CaviarDreams';
 	font-size: 120%;
 }
 
@@ -57,8 +106,8 @@ img{
 	background-color: #e7e7e7;
 	color: black; /* Green */
    	border: 2px solid rgb(55, 38, 110); 
-    padding: 8px 32px;
-    margin-right: 5px;
+    padding: 6px 20px;
+    margin-right: 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -66,11 +115,13 @@ img{
     border-radius: 3px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+     font-family: 'CaviarDreams_Bold';
 }
 
 .bouton:hover{
 	background-color: rgb(142, 212, 232); /* Green */
     color: white;
+    
 }
 
 
@@ -78,8 +129,9 @@ h1{
 	font-family: 'SoftLine';
 	text-align: center;
 	margin: 0px;
-	font-size: 50px;
+	font-size: 100px;
 	color :rgb(55, 38, 110) ;
+
 
 
 }
@@ -88,6 +140,8 @@ h4{
 	color :rgb(151, 170, 179) ;
 	font-size: 200%;
 	margin: 0px;
+	font-family: 'SoftLine';
+
 }
 
 
