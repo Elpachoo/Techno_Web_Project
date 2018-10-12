@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'SoftLine';
+    src: url('../fonts/SoftLine.otf') ;
+}
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams.ttf') ;
+}
+@font-face {
+    font-family: 'CaviarDreams_Bold';
+    src: url('../fonts/CaviarDreams_Bold.ttf') ;
+}
+@font-face {
+    font-family: 'futur';
+    src: url('../fonts/FUTRFW.ttf') ;
+}
+
+
+
+.header
+{
+	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
+	background-color: #D4F2FF;
+	background-image: url('pictures/header_background.jpg');
+	background-repeat:no-repeat;
+	background-position:left top;
+	background-size: 100% 100%;
+	width: 100%;
+	font-family: 'CaviarDreams';
+
+	
+}
+
+/* placement du containeur logo */
+.logo_div
+{
+	text-align: center;
+	margin-top: 10px;
+	padding-bottom: 15px; /* espace entre le logo et le menu */
+	text-decoration: none;
+}
+
+/* taille du logo */
+.titre
+{
+	text-decoration: none;
+	color: black;
+	font-size: 120px;
+  font-family: 'futur'; 
+}
+
+.SousMenu
+{
+	color : black;
+	text-align: center;
+	padding: 12px;
+  text-decoration: none; /* retire le sous-lignage */
+  font-size: 25px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: Softline;
+  font-weight: bold;
+
+}
+
+/* Change la couleur quand on passe la souris sur un menu */
+.SousMenu:hover 
+{
+  background-color: #FCFEFF;
+  color: black;
+}
+
+
+
+/* Met une couleur sur le menu dans lequel on se trouve */
+.SousMenu
+{
+  background-color: #FCFEFF;
+  color: #97AAB2;
+}
+
+.MenuCategory 
+{
+  text-align: center;
+  margin-bottom: 15px; /* Décalle de 15px vers le haut les catégories */
+}
+
+/* paramètre responsive */
+@media screen and (max-width: 500px) 
+{
+  .header a 
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .MenuCategory 
+  {
+    float: none;
+  }
+}

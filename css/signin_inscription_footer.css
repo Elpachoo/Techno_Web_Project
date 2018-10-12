@@ -1,0 +1,131 @@
+body
+{
+    background: rgb(252,254,255);
+    font-family: 'Trebuchet MS', Arial;
+    color: #181818;
+}
+
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+
+h1 
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 0px;
+}
+
+#titre_connexion
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 300px;   
+}
+
+#message_indication
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 300px;
+}
+
+
+/*h2
+{
+    font-family: 'Arial';
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}*/
+
+/* Formulaire inscription et formulaire connexion */
+
+#formulaire_connexion
+{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width:730px;
+
+}
+
+#formulaire_inscription
+{
+    display: flex;
+    flex-direction: column;    
+    margin: auto;
+    width:730px;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 177px;
+    height: 180px;
+}
+
+/* Titres de mes fichiers */
+
+#titre_principal_inscription h1
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0 0 0 200px;
+}
+
+#titre_principal_inscription h2
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 1.5em;
+    font-weight: normal;
+    flex-direction: column;
+    margin: 300 0 0 100px;
+}
+
+#second_titre h2
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 1.5em;
+    font-weight: normal;
+    flex-direction: column;
+    margin: 0 0 0 320px;
+}
+
+#formulaire_inscription h2
+{
+    font-family: 'BallparkWeiner', ;
+    font-size: 1.5em;
+    font-weight: normal;
+    flex-direction: column;
+    margin: 0 0 0 250px;
+}
+
+/* Footer */
+footer
+{
+    flex-direction: row;
+    display: flex;
+    padding-right: 0px;
+    margin: 0 0 0 0px;
+}
+
+footer h1
+{
+    font-size: 1.5em;
+    font-family: 'BallparkWeiner', ;
+    font-weight: normal;
+    margin: 0 0 0 100px;
+}

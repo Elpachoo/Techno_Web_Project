@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'NORMT';
+    src: url('css/NORMT.ttf') ;
+}
+
+div{
+	font-family: NORMT;
+	top : 300px;
+}
