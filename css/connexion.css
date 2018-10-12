@@ -1,8 +1,6 @@
 body
 {
-    background: rgb(252,254,255);
-    font-family: 'Trebuchet MS', Arial;
-    color: #181818;
+    margin: 0;
 }
 
 #bloc_page
@@ -11,7 +9,7 @@ body
     margin: auto;
 }
 
-h1 
+body > h1 
 {
     font-family: 'BallparkWeiner', ;
     font-size: 2.5em;
@@ -35,14 +33,6 @@ h1
     margin: 0 0 0 300px;
 }
 
-
-/*h2
-{
-    font-family: 'Arial';
-    font-size: 1.5em;
-    font-weight: normal;
-    margin: 0 0 0 10px;
-}*/
 
 /* Formulaire inscription et formulaire connexion */
 
@@ -78,7 +68,7 @@ h1
 
 /* Titres de mes fichiers */
 
-#titre_principal_inscription h1
+#titre_principal_inscription, h1
 {
     font-family: 'BallparkWeiner', ;
     font-size: 2em;

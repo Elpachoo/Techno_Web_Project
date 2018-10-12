@@ -20,6 +20,9 @@ catch(Exception $e)
 }
 ?>
 
+<!-- Initialisation de la session -->
+<?php session_start(); ?>
+
 <!-- Ajout de l'header -->
 <?php include("header.php"); ?> 
 

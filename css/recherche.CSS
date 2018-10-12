@@ -49,17 +49,8 @@ h2
     text-align: center;
     font-size: 1.5em;
     font-weight: normal;
-    /*flex-direction: column;
-    margin: 0 0 0 320px;*/
 }
-/*#searchbar 
-{
-    font-family: 'BallparkWeiner', ;
-    font-size: 1.5em;
-    font-weight: normal;
-    flex-direction: column;
-    margin: 0 0 0 250px;
-}*/
+
 #searchbar .bouton{
     width: 35px;
     height: 35px;
