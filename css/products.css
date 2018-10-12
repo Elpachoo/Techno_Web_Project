@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'SoftLine';
-    src: url('SoftLine.otf') ;
+    src: url('../fonts/SoftLine.otf') ;
 }
 @font-face {
     font-family: 'CaviarDreams';
-    src: url('CaviarDreams.ttf') ;
+    src: url('../fonts/CaviarDreams.ttf') ;
 }
 @font-face {
     font-family: 'CaviarDreams_Bold';
-    src: url('CaviarDreams_Bold.ttf') ;
+    src: url('../fonts/CaviarDreams_Bold.ttf') ;
 }
 
 

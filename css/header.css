@@ -1,14 +1,18 @@
 @font-face {
     font-family: 'SoftLine';
-    src: url('css/SoftLine.otf') ;
+    src: url('../fonts/SoftLine.otf') ;
 }
 @font-face {
     font-family: 'CaviarDreams';
-    src: url('css/CaviarDreams.ttf') ;
+    src: url('../fonts/CaviarDreams.ttf') ;
 }
 @font-face {
     font-family: 'CaviarDreams_Bold';
-    src: url('css/CaviarDreams_Bold.ttf') ;
+    src: url('../fonts/CaviarDreams_Bold.ttf') ;
+}
+@font-face {
+    font-family: 'futur';
+    src: url('../fonts/FUTRFW.ttf') ;
 }
 
 
@@ -42,7 +46,7 @@
 	text-decoration: none;
 	color: black;
 	font-size: 120px;
-  font-family: 'SoftLine'; 
+  font-family: 'futur'; 
 }
 
 .SousMenu

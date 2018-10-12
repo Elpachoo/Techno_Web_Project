@@ -1,7 +1,7 @@
 <header>
 	<div class="header">
 		<div class="logo_div">
-			<a href="home.php" class="titre"><span>W a t e r &nbsp;&nbsp; L i f e</span></a>
+			<a href="home.php" class="titre"><span>Water  Life</span></a>
 		</div>
 		<div class="MenuCategory">
 			<a class="SousMenu" href="home.php"><span>HOME</span></a>
