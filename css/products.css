@@ -17,10 +17,15 @@ body{
 	margin : 0;
 }
 
+.navSection nav {
+	 position: sticky;
+
+}
+
 
 body nav {
     border-radius: 5px 5px;
-    position: sticky;
+   
     top: 0;
     left:0;
     width: 100%;

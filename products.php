@@ -5,11 +5,13 @@
     <title>Water Life</title>
     <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 <body>
 	<header> 
    <?php include('header.php'); ?>     
   </header>
 
+  <div class="navSection">
     <nav>
        <ul>
         <li> <a href="#TitrePlate">Eaux Plates</a></li>
@@ -236,14 +238,13 @@
                </div> 
               <h4> Bling H2O </h4>
               <div class="price"> 70€ </div>              
-               <br><br><br>
+               <br><br><br><br><br><br>
             </div>
           </div> <!-- fin row -->
         </div><!-- fin container de luxe -->
 
     </section>
-
-  
+    </div> <!-- fin div navSection -->
 
 </body>
 
