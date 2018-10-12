@@ -1,13 +1,17 @@
-body{
+body
+{
     background: rgb(252,254,255);
     font-family: 'Trebuchet MS', Arial;
     color: #181818;
+    margin: 0;
 }
+
 #bloc_page
 {
     width: 900px;
     margin: auto;
 }
+
  h1
 {
     font-family: 'BallparkWeiner', ;
@@ -15,17 +19,20 @@ body{
     font-weight: normal;
     margin: 0 0 0 200px;
 }
+
 #searchbar{
     position:relative;
     width:1040px;
     height:auto;
     display:inline-block;
 }
+
 #searchbar .text{
     width:150px;
     float:left; 
     font-size: 1.2em;   
 }
+
 #searchbar .champ{
     font-family: 'BallparkWeiner', ;
     font-size: 1.5em;
@@ -35,6 +42,7 @@ body{
     float:left;
     margin: 0 0 0 0px;
 }
+
 h2
 {
     font-family: 'BallparkWeiner', ;
@@ -59,18 +67,3 @@ h2
     border:none;
     float:left;
 }
-/*footer
-{
-    flex-direction: row;
-    display: flex;
-    padding-right: 0px;
-    margin: 0 0 0 0px;
-}
-footer h1
-{
-    font-size: 1.5em;
-
-    font-family: 'BallparkWeiner', ;
-    font-weight: normal;
-    margin: 0 0 0 100px;
-}*/

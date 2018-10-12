@@ -21,7 +21,7 @@
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
 	background-color: #D4F2FF;
-	background-image: url('pictures/header_background.jpg');
+	background-image: url('../pictures/header_background.jpg');
 	background-repeat:no-repeat;
 	background-position:left top;
 	background-size: 100% 100%;
