@@ -14,11 +14,12 @@
 
 body{
 	font-family:"CaviarDreams";	
+	margin : 0;
 }
 
 
 body nav {
-    margin-top: 203px;
+   
     border-radius: 5px 5px;
     position: sticky;
     top: 0;
