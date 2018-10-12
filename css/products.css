@@ -5,9 +5,7 @@
 
 .navSection nav {
 	 position: sticky;
-
 }
-
 
 .body nav {
     border-radius: 5px 5px;
@@ -31,8 +29,6 @@
 }
 .body img:hover{
 	opacity: 0.7;
-
-	
 }
 
 .body ul {
@@ -42,8 +38,8 @@
     overflow: hidden;
     background-color: #333;
     font-family: 'CaviarDreams_Bold',arial;  
-    
 }
+
 .body li {
    float: left;
 }
@@ -67,23 +63,23 @@
     text-align: center;
     border-radius: 10px;
     border: 2px solid rgb(55, 38, 110); 
-    padding: 6px;
-
-   
+    padding: 6px; 
 }
 
 .image:hover .legende {
 	display: block;
 	position: absolute;
 	background-color: #e7e7e7;
-
-
-
 }
 
-.row{
+.produit {
 	display:  flex;
-	justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.produit > *{
+     flex: 25%;
 }
 
 .price{
