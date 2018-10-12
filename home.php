@@ -12,9 +12,7 @@
 </header>
 <body>
 	<br>
-	<br>
-	<a href="products.php"><img src="pictures/promoeaux.jpg" ></a>
-
+	<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
 </body>
 <?php include('footer.php') ?>
 </html>
