@@ -19,13 +19,12 @@ body{
 
 
 body nav {
-   
     border-radius: 5px 5px;
     position: sticky;
     top: 0;
     left:0;
     width: 100%;
-     z-index: 1; /*pr placer tout au dessus*/
+    z-index: 1; /*pr placer tout au dessus*/
 }
 body section{
 	background-color: rgb(252, 254, 255);

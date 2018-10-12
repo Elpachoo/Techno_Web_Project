@@ -4,10 +4,7 @@
     <meta charset="utf-8"/>
     <title>Water Life</title>
     <link rel="stylesheet" href="css/products.css" />
-</head>
-
-
-
+    <link rel="stylesheet" type="text/css" href="css/header.css">
 <body>
 	<header> 
    <?php include('header.php'); ?>     
