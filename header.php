@@ -1,5 +1,4 @@
 <header>
-	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<div class="header">
 		<div class="logo_div">
 			<a href="home.php" class="titre"><span>W a t e r &nbsp;&nbsp; L i f e</span></a>
