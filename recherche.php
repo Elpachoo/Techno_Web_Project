@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Water Life</title>
+    <link rel="icon" href="pictures/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/recherche.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
@@ -19,9 +20,6 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 ?>
-
-<!-- Initialisation de la session -->
-<?php session_start(); ?>
 
 <!-- Ajout de l'header -->
 <?php include("header.php"); ?> 

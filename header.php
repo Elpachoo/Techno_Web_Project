@@ -1,4 +1,8 @@
 <header>
+
+	<!-- On lance une session directement depuis le header -->
+	<?php session_start(); ?>
+
 	<div class="header">
 		<div class="logo_div">
 			<a href="home.php" class="titre"><span>Water  Life</span></a>
@@ -23,6 +27,7 @@
 			<a class="SousMenu" href="connexion.php"><span>Connexion</span></a>
 			<?php } ?>
 
+			<a class="deconnexion" href="deconnexion.php"><img src="http://icons.iconarchive.com/icons/mysitemyway/clean-3d/256/glossy-3d-blue-delete-icon.png" id="bouton_deconnexion"></a>
 		</div>
 	</div>
 </header>

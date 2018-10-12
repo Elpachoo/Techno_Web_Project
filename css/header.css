@@ -7,9 +7,7 @@
 	background-position:left top;
 	background-size: 100% 100%;
 	width: 100%;
-	font-family: 'CaviarDreams';
-
-	
+	font-family: 'CaviarDreams';	
 }
 
 /* placement du containeur logo */
@@ -58,6 +56,18 @@
 {
   background-color: #FCFEFF;
   color: #97AAB2;
+}
+
+.deconnexion
+{
+  text-align: left;
+  padding-bottom: 0px;
+}
+
+#bouton_deconnexion
+{
+  margin-bottom: 0px;
+  width: 100px;
 }
 
 .MenuCategory 
