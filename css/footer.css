@@ -2,6 +2,7 @@
 {
 	background-color: #97AAB2;
 	width: 100%;
+	overflow: hidden;
 }
 
 .logo_div
@@ -9,14 +10,14 @@
     text-align: center;
 }
 
-.logo_twitter, .logo_youtube, .logo_googlemaps, .logofacebook
+.logo_div > a
 {
 	margin: 20px;
 }
 
 .copyright_footer
 {
-	font-family: Softline;
+	font-family: CaviarDreams;
 	font-weight: bold;
 	text-align: center;
 }
