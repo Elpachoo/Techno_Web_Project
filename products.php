@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
 <body>
 	<header> 
    <?php include('header.php'); ?>     
@@ -253,6 +255,6 @@
 
   </body>
     <footer>
-      <!-- <?php include('footer.php') ?>   -->
+      <?php include('footer.php') ?> 
     </footer>
 </html>
