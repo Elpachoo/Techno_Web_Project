@@ -1,257 +1,415 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Water Life</title>
-  <link rel="stylesheet" type="text/css" href="css/products.css" />
-  <link rel="stylesheet" type="text/css" href="css/fonts.css">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/footer.css">
-</head>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Water Life</title>
+    <link rel="stylesheet" type="text/css" href="css/products.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+  </head>
 
-<!-- Ajout de l'header -->
-<?php include("header.php"); ?> 
+  <!-- Ajout de l'header -->
+  <?php include("header.php"); ?> 
 
-<body>
-  <div class="navSection">
-    <nav>
-     <ul>
-      <li> <a href="#TitrePlate">Eaux Plates</a></li>
-      <li> <a href="#TitreGazeuses">Eaux Gazeuses</a> </li>
-      <li> <a href="#TitreSucree">Eaux Sucrées</a></li>
-      <li> <a href="#TitreDeLuxe">Eaux de Luxe</a></li>
-    </ul> 
-  </nav>
+  <body class="body">
 
-  <section>
-    <div id="container"> <!-- Contient 6 produits -->
-      <div id="TitrePlate">
-        <br><br><br>
-        <h1>Eaux plates</h1>
-        <br>
-      </div>
+    <?php // On se connecte à MySQL
+      try{
+        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
+      }
+      catch(Exception $e){
+        // En cas d'erreur, on affiche un message et on arrête tout
+        die('Erreur : '.$e->getMessage());
+      }
+    ?>
 
+    <div class="navSection"> <!-- Englobe tout sauf header et footer -->
+      <nav>
+        <ul>
+          <li> <a href="#TitrePlate">Eaux Plates</a></li>
+          <li> <a href="#TitreGazeuses">Eaux Gazeuses</a> </li>
+          <li> <a href="#TitreSucree">Eaux Sucrées</a></li>
+          <li> <a href="#TitreDeLuxe">Eaux de Luxe</a></li>
+        </ul> 
+      </nav>
 
-      <div class="row">
-        <div class="produit">
-          <div class=image>
-            <a href="productPage.php?produit=Volvic"><img src="pictures/volvic.png" alt="Product " />  </a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>
-          <h4> Volvic </h4>
-          <div class="price"> 3.50€ </div>
-              <!--
-              <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
-            -->
-            <br>
-        </div>
+       <!--
+                  <div class="panier"> <input class="bouton" type="button"value="Ajouter au panier"/> </div>
+                -->
 
-          <div class="produit">
-            <div class=image>
-              <a href="productPage.php?produit=Cristaline"><img src="pictures/cristaline.png" alt="Product" /> </a>
-              <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+      <section>
+
+        <div id="container"> <!-- Contient 6 produits -->
+            <div id="TitrePlate">
+              <br><br><br>
+              <h1 class="h1">Eaux plates</h1>
+              <br>
             </div>
-            <h4> Cristaline </h4>
-            <div class="price"> 2.70€  <br> </div>
-            <br>
-          </div>
 
-          <div class="produit">
-            <div class=image> 
-              <a href="productPage.php?produit=Evian"> <img src="pictures/evian.png" alt="Product" /> </a>
-              <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+          <div class="row">
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Volvic\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
             </div>
-            <h4> Evian </h4>
-            <div class="price"> 20€  <br> </div>
-            <br>
-          </div>
 
-          <div class="produit">
-            <div class=image>
-              <a href="productPage.php?produit=Contrex"> <img src="pictures/contrex.png" alt="Product" /></a>
-              <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-            </div>     
-            <h4> Contrex </h4>
-            <div class="price"> 20€ </div> 
-            <br>
-          </div>
-        </div><!-- fin row1Plate -->
 
-        <div class="row">
-          <div class="produit">
-            <div class=image>
-              <a href="productPage.php?produit=Plancoet"><img src="pictures/plancoet2.png" alt="Product" /></a>
-              <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Cristaline\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
             </div>
-            <h4> Plancoet </h4>
-            <div class="price"> 20€ </div>
-            <br>
-          </div>
 
-          <div class="produit">
-           <div class=image> 
-            <a href="productPage.php?produit=Vittel"><img src="pictures/vittel.png" alt="Product" /></a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>
-          <h4> Vittel </h4>
-          <div class="price"> 20€ </div>
-          <br>
-        </div>
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Evian\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img"  src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-        <div class="produit">
-          <div class=image>
-            <a href="productPage.php?produit=Hepar"><img src="pictures/hepart.png" alt="Product" /></a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>
-          <h4> Hepar </h4>
-          <div class="price"> 20€ </div>
-          <br>
-        </div>    
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Contrex\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-      </div><!-- fin row2Plate -->
-      <br><br>
-    </div> <!-- fin containerPlates -->
+          </div><!-- fin row1Plate -->
 
+          <div class="row">
 
-    <div id="container"> <!-- Contient 3 produit= -->
-      <div id="TitreGazeuses">
-        <br><br><br>
-        <h1>Eaux Gazeuses</h1>
-        <br>
-      </div>
+            <div class="produit">
+               <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Plancoet\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-      <div class="row">
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Vittel\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-        <div class="produit">
-          <div class=image>
-            <a href="productPage.php?produit=Perrier"><img src="pictures/perrier.png" alt="Product" /></a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>
-          <h4> Perrier </h4>
-          <div class="price"> 20€ </div>
-          <br>
-        </div>
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Hepar\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>    
 
-        <div class="produit">
-          <div class=image>
-            <a href="productPage.php?produit=Badoit"><img src="pictures/badoit.png" alt="Product" /></a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>
-          <h4> Badoit </h4>
-          <div class="price"> 20€ </div>            
-          <br>
-        </div>
-
-        <div class="produit">
-          <div class=image>
-            <a href="productPage.php?produit=Saint-Amand"><img src="pictures/saintamand.png" alt="Product"/></a>
-            <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-          </div>   
-          <h4> Saint-Amand </h4>
-          <div class="price"> 20€ </div>      
+          </div><!-- fin row2Plate -->
           <br><br>
-        </div>
-
-      </div> <!-- fin row -->
-      <br><br>
-    </div><!-- fin containerGazeuses -->
+        </div> <!-- fin containerPlates -->
 
 
+        <div id="container"> <!-- Contient 3 produit= -->
+          <div id="TitreGazeuses">
+            <br><br><br>
+            <h1 class="h1">Eaux Gazeuses</h1>
+            <br>
+          </div>
+
+          <div class="row">
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Perrier\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Badoit\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Saint-Amand\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br><br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
+
+          </div> <!-- fin row -->
+          <br><br>
+        </div><!-- fin containerGazeuses -->
+
+        <div id="container"> <!-- Contient 3 produits -->
+          <div id="TitreSucree">
+            <br><br><br>
+            <h1 class="h1">Eaux Sucrees</h1>
+            <br>
+          </div>
+
+          <div class="row">
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Volvic Fraise\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Volvic Citron\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+             <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
+
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Volvic Thé\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div> 
+
+          </div>  <!-- fin row -->
+           <br><br><br>
+        </div><!-- fin containerSucree -->
 
 
-    <div id="container"> <!-- Contient 3 produits -->
-      <div id="TitreSucree">
-       <br><br><br>
-       <h1>Eaux Sucrees</h1>
-       <br>
-     </div>
+        <div id="container"> <!-- Contient 3 produit= -->
+          <div id="TitreDeLuxe">
+            <br><br>
+            <h1 class="h1">Eaux de Luxe</h1>
+            <br>
+          </div>
 
+          <div class="row">
 
-     <div class="row">
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Gota\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+             <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-      <div class="produit">
-        <div class=image> 
-          <a href="productPage.php?produit=Volvic_Fraise"><img src="pictures/volvicfraise.png" alt="Product" /></a>
-          <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>           
-        </div>
-        <h4> Volvic Fraise</h4>
-        <div class="price"> 4€ </div>  
-        <br>
-      </div>
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Ice Landic\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-      <div class="produit">
-       <div class=image>
-        <a href="productPage.php?produit=Volvic_Citron"><img src="pictures/volviccitron.png" alt="Product" /></a>
-        <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>         
-      </div>
-      <h4> Volvic Citron</h4>
-      <div class="price"> 4€ </div>           
-      <br>
-    </div>
+            <div class="produit">
+              <?php 
+                $req=$bdd->query('SELECT * FROM products WHERE Marque = \'Bling H2O\' ');
+                while($donnees=$req->fetch())
+                {
+              ?>
+              <div class=image>
+                <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                <div class="legende"> <?php echo $donnees['Description']; ?> </div>
+              </div>
+              <h4 > <?php echo $donnees['Marque'];  ?> </h4>
+              <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+              <br>
+              <?php 
+                }
+                $req->closeCursor();
+              ?>
+            </div>
 
-    <div class="produit">
-      <div class=image>
-        <a href="productPage.php?produit=Volvic"><img src="pictures/volvicthe.png" alt="Product" /></a> 
-        <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-      </div>
-      <h4> Volvic The </h4>
-      <div class="price"> 6€ </div>           
-      <br>
-    </div> 
+          </div> <!-- fin row -->
+          <br><br><br><br><br>
+        </div><!-- fin container de luxe -->
 
-  </div>  <!-- fin row -->
-  <br><br>
-</div><!-- fin containerSucree -->
+      </section>
+    </div> <!-- fin div navSection -->
 
+  </body>
 
-<div id="container"> <!-- Contient 3 produit= -->
-  <div id="TitreDeLuxe">
-    <br><br>
-    <h1>Eaux de Luxe</h1>
-    <br>
-  </div>
-
-  <div class="row">
-
-    <div class="produit">
-     <div class=image>
-      <a href="productPage.php?produit=Gota"><img src="pictures/gota.png" alt="Product" /></a>
-      <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>
-    </div>
-    <h4> Gota </h4>
-    <div class="price"> 150€ </div>           
-    <br>
-  </div>
-
-  <div class="produit">
-    <div class=image>
-      <a href="productPage.php?produit=Ice_Landic"> <img src="pictures/icelandic.png" alt="Product" /></a> 
-      <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div>             
-    </div>             
-    <h4> Ice Landic </h4>
-    <div class="price"> 179€ </div>             
-    <br>
-  </div>
-
-  <div class="produit">
-    <div class=image>
-      <a href="productPage.php?produit=Bling_H2O"><img src="pictures/blingh2o.png" alt="Product" /></a> 
-      <div class="legende"> Eau pure venant des montagnes, filtrée naturellement, prévelevée à la source </div> 
-    </div> 
-    <h4> Bling H2O </h4>
-    <div class="price"> 70€ </div>              
-    <br>
-  </div>
-
-</div> <!-- fin row -->
-<br><br><br><br>
-</div><!-- fin container de luxe -->
-</section>
-</div> <!-- fin div navSection -->
-
-</body>
-
-<!-- Ajout du footer -->
-<?php include('footer.php') ?>
+  
+  <?php include('footer.php') ?>
+  
 
 </html>

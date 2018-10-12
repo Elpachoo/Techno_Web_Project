@@ -1,18 +1,4 @@
-@font-face {
-    font-family: 'SoftLine';
-    src: url('../fonts/SoftLine.otf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams.ttf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams_Bold';
-    src: url('../fonts/CaviarDreams_Bold.ttf') ;
-}
-
-
-body{
+.body{
 	font-family:"CaviarDreams";	
 	margin : 0;
 }
@@ -23,7 +9,7 @@ body{
 }
 
 
-body nav {
+.body nav {
     border-radius: 5px 5px;
    
     top: 0;
@@ -31,11 +17,11 @@ body nav {
     width: 100%;
     z-index: 1; /*pr placer tout au dessus*/
 }
-body section{
+.body section{
 	background-color: rgb(252, 254, 255);
 }
 
-body img{
+.body .img{
 	display: block;
 	max-height:400px;
 	max-width:300px;
@@ -43,13 +29,13 @@ body img{
     margin-right: auto;
 
 }
-body img:hover{
+.body img:hover{
 	opacity: 0.7;
 
 	
 }
 
-body ul {
+.body ul {
    	list-style-type: none;
     margin: 0;
     padding: 0;
@@ -58,10 +44,10 @@ body ul {
     font-family: 'CaviarDreams_Bold',arial;  
     
 }
-body li {
+.body li {
    float: left;
 }
-body li a {
+.body li a {
 	display: inline;
     display: block;
     color: white;
@@ -69,18 +55,20 @@ body li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-body li a:hover {
+.body li a:hover {
     background-color: #111;
 }
 
 
 .legende{
 	display: none;
-	width: 190px;
-    height: 100px;
+	width: 178px;
+    height: 75px;
     text-align: center;
     border-radius: 10px;
     border: 2px solid rgb(55, 38, 110); 
+    padding: 6px;
+
    
 }
 
@@ -134,7 +122,7 @@ body li a:hover {
 }
 
 
-body h1{
+.body .h1{
 	font-family: 'SoftLine',arial;
 	text-align: center;
 	margin: 0px;
@@ -142,7 +130,7 @@ body h1{
 	color :rgb(55, 38, 110) ;
 }
 
-body h4{
+.body h4{
 	text-align: center;
 	color :rgb(151, 170, 179) ;
 	font-size: 200%;
