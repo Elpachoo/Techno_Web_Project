@@ -31,6 +31,10 @@ td, th /* Mettre une bordure sur les td ET les th */
     text-align: center;
 }
 
+.description{
+	text-align: left;
+}
+
 .body .img{
 	display: block;
 	max-height:200px;
