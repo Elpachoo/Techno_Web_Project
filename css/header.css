@@ -11,6 +11,8 @@
     src: url('css/CaviarDreams_Bold.ttf') ;
 }
 
+
+
 .header
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
@@ -19,12 +21,13 @@
 	background-repeat:no-repeat;
 	background-position:left top;
 	background-size: 100% 100%;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
-	font-family: CavierDreams;
-	font-weight: bold;
+	font-family: 'CaviarDreams';
+
+	
 }
 
 /* placement du containeur logo */
@@ -42,6 +45,7 @@
 	text-decoration: none;
 	color: black;
 	font-size: 120px;
+  font-family: 'SoftLine'; 
 }
 
 .SousMenu

@@ -17,81 +17,76 @@ body{
 }
 
 
-nav {
+body nav {
     margin-top: 203px;
     border-radius: 5px 5px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left:0;
     width: 100%;
-     /*z-index: 1; /*pr placer tout au dessus*/
+     z-index: 1; /*pr placer tout au dessus*/
 }
-section{
+body section{
 	background-color: rgb(252, 254, 255);
 }
 
-img{
+body img{
 	display: block;
 	max-height:400px;
 	max-width:300px;
     margin-left: auto;
     margin-right: auto;
+
 }
-img:hover{
+body img:hover{
 	opacity: 0.7;
+
 	
 }
 
-ul {
+body ul {
    	list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    font-family: 'CaviarDreams_Bold';
-   
+    font-family: 'CaviarDreams_Bold',arial;  
+    
 }
-li {
+body li {
    float: left;
-
 }
-li a {
-	 display: inline;
+body li a {
+	display: inline;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-li a:hover {
+body li a:hover {
     background-color: #111;
 }
 
+
 .legende{
 	display: none;
-	transition-property: color, width, height;
-	transition-duration: 2s;
-	height: 100px;
-	width: 200px ;
-
-
-	}
-
-.produit {
-	
-}	
-
-
-.image:hover .legende {
-
-	display: inline-block;
-	position: absolute;
-	height: 300px;
-	 width: 300px ;
-	text-align: center;
-	background-color: #e7e7e7;
+	width: 190px;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgb(55, 38, 110); 
+   
 }
 
+.image:hover .legende {
+	display: block;
+	position: absolute;
+	background-color: #e7e7e7;
+
+
+
+}
 
 .row{
 	display:  flex;
@@ -101,16 +96,17 @@ li a:hover {
 .price{
 	text-align: center;
 	color:black ;
-	font-family: 'CaviarDreams';
+	font-family: 'CaviarDreams',arial;
 	font-size: 120%;
 }
 
 .panier{
 	text-align: center;
 }
+
 .bouton{
 	background-color: #e7e7e7;
-	color: black; /* Green */
+	color: black; 
    	border: 2px solid rgb(55, 38, 110); 
     padding: 6px 20px;
     margin-right: 0px;
@@ -119,10 +115,12 @@ li a:hover {
     display: inline-block;
     font-size: 16px;
     border-radius: 3px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-     font-family: 'CaviarDreams_Bold';
+     font-family: 'CaviarDreams_Bold',arial;
 }
+
+
 
 .bouton:hover{
 	background-color: rgb(142, 212, 232); /* Green */
@@ -131,22 +129,20 @@ li a:hover {
 }
 
 
-h1{
-	font-family: 'SoftLine';
+body h1{
+	font-family: 'SoftLine',arial;
 	text-align: center;
 	margin: 0px;
 	font-size: 100px;
 	color :rgb(55, 38, 110) ;
-
-
-
 }
-h4{
+
+body h4{
 	text-align: center;
 	color :rgb(151, 170, 179) ;
 	font-size: 200%;
 	margin: 0px;
-	font-family: 'SoftLine';
+	font-family: 'SoftLine'arial;
 
 }
 

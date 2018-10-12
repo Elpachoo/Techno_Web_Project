@@ -2,7 +2,7 @@
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<div class="header">
 		<div class="logo_div">
-			<a href="home.php" class="titre"><span>W A T E R &nbsp;&nbsp;&nbsp; L I F E</span></a>
+			<a href="home.php" class="titre"><span>W a t e r &nbsp;&nbsp; L i f e</span></a>
 		</div>
 		<div class="MenuCategory">
 			<a class="SousMenu" href="home.php"><span>HOME</span></a>

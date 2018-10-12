@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/cart.css">
 </head>
 <header>
-	<?php include 'header.php' ?>
+	<!-- <?php include 'header.php' ?> -->
 </header>
 <body>
 	<div>Your cart is empty</div>
