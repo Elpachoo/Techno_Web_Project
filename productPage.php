@@ -4,6 +4,6 @@
 	<title></title>
 </head>
 <body>
-	<p> COUCOU</p>
+	<p>Bonjour <?php echo $_GET['produit']; ?> !</p>
 </body>
 </html>
