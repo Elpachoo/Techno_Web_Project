@@ -1,22 +1,3 @@
-@font-face {
-    font-family: 'SoftLine';
-    src: url('../fonts/SoftLine.otf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams.ttf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams_Bold';
-    src: url('../fonts/CaviarDreams_Bold.ttf') ;
-}
-@font-face {
-    font-family: 'futur';
-    src: url('../fonts/FUTRFW.ttf') ;
-}
-
-
-
 .header
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
