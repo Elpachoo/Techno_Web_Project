@@ -1,5 +1,4 @@
 <footer>
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
     <div class="footer">
          <div id="conditions_generales">
             <h1>CONDITIONS GENERALES</h1>
