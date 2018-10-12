@@ -34,7 +34,7 @@ catch(Exception $e)
         if(!isset($_POST['submit']))
         {
         ?>
-    	<form method="post" action="recherche.php">
+    	<form method="post" action="recherche_2.php">
         	<input class="champ" type="text" name="recherche" placeholder="Exemple: Evian.."/>
         	<input class="bouton" type="submit" name="submit" src="pictures/search2.png" value="valider"  /> 
         	
