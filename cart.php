@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
 	<title>My Cart</title>
 	<link rel="stylesheet" type="text/css" href="css/cart.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 <?php
 try
@@ -18,7 +21,7 @@ catch(Exception $e)
 ?>
 
 <header>
-	<!-- <?php include 'header.php' ?> -->
+	<?php include("header.php"); ?> 
 </header>
 <body>
 	<p>Your cart is empty</p>
@@ -41,4 +44,5 @@ catch(Exception $e)
     ?>
      </div> 
 </body>
+<?php include('footer.php') ?>
 </html>
