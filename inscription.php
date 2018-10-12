@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="signin_inscription_footer.css" />
 =======
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
 >>>>>>> Step1
 </head>
 <body>

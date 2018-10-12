@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 12 oct. 2018 à 17:10
+-- Généré le :  ven. 12 oct. 2018 à 17:25
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -21,6 +21,33 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `ecommerce`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `panier`
+--
+
+DROP TABLE IF EXISTS `panier`;
+CREATE TABLE IF NOT EXISTS `panier` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `Marque` varchar(535) NOT NULL,
+  `Quantite` int(11) NOT NULL,
+  `Prix` float NOT NULL,
+  `Type` varchar(535) NOT NULL,
+  `Materiau` varchar(535) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `panier`
+--
+
+INSERT INTO `panier` (`id`, `id_user`, `Marque`, `Quantite`, `Prix`, `Type`, `Materiau`) VALUES
+(1, 1, 'Volvic', 1, 3.5, 'Plate', 'Plastique'),
+(2, 2, 'Evian', 1, 3.7, 'Plate', 'Plastique'),
+(3, 3, 'Perrier', 2, 10, 'Gazeuse', 'Plastique');
 
 -- --------------------------------------------------------
 
@@ -62,6 +89,36 @@ INSERT INTO `products` (`id`, `Prix`, `Type`, `Materiau`, `Quantite`, `Marque`, 
 (14, 35, 'Luxe', 'Aluminium', 20, 'Gota', 'Buvez un verre de Gota et voyez vos forces décuplées.', 'pictures/gota.png'),
 (15, 50, 'Luxe', 'Ecailles de dragon', 20, 'Ice Landic', 'Cette eau vous transformera en esquimau !', 'pictures/icelandic.png'),
 (16, 75, 'Luxe', 'Obsidienne', 10, 'Bling H2O', 'Une eau invisible, vous ne la boirez pas, vous ne la sentirez pas, vous allez la vivre !', 'pictures/blingh2o.png');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom` varchar(535) NOT NULL,
+  `Prenom` varchar(535) NOT NULL,
+  `Login` varchar(535) NOT NULL,
+  `Password` varchar(535) NOT NULL,
+  `Mail` varchar(535) NOT NULL,
+  `PhoneNumber` bigint(20) NOT NULL,
+  `Adresse` varchar(535) NOT NULL,
+  `CodePostal` int(11) NOT NULL,
+  `Pays` varchar(535) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`Id`, `Nom`, `Prenom`, `Login`, `Password`, `Mail`, `PhoneNumber`, `Adresse`, `CodePostal`, `Pays`) VALUES
+(1, 'Ghys', 'Robin', 'Elpachoo', 'bouteille', 'robin.ghys@isen.yncrea.fr', 118218, 'rue de l\'isen', 59000, 'France'),
+(2, 'Haddadi', 'Giovanni', 'Giogio', 'bouteille2', 'giovanni.haddadi@isen.yncrea.fr', 111211, 'Allee des alouettes', 59000, 'Angleterre'),
+(3, 'Hermel', 'Jean', 'JeanJean', 'bouteille3', 'jean-alexis.hermel@isen.yncrea.fr', 5566, '10 rue moineau', 60000, 'France');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
