@@ -161,7 +161,8 @@
                   <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                   <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                   <h4 > <?php echo $donnees['Marque'];  ?> </h4>
-                  <div class="price"> <?php echo $donnees['Prix']; ?>€ </div>
+                  <div class="price"> <?php echo $donnees['Prix']; ?>€ 
+                  </div>
                   <br><br><br>
                 </div>
               </div>
@@ -170,8 +171,7 @@
                 }
                 $req->closeCursor();
               ?>
-            </div>
-          </div><!-- fin row --> 
+            </div> <!-- fin produit -->
           <br><br><br>
         </div><!-- fin container de luxe -->
 
@@ -180,6 +180,5 @@
   </body>
 
   <?php include('footer.php') ?>
-  
 
 </html>
