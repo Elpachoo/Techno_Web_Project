@@ -24,25 +24,27 @@ catch(Exception $e)
 	<?php include("header.php"); ?> 
 </header>
 <body>
-	<p>Your cart is empty</p>
-
 	<div class="legende"> 
     <?php 
-    $req=$bdd->query('SELECT user.Prenom AS prenom_user, panier.Marque AS marque_bouteille, panier.Quantite AS quantite FROM panier, user WHERE panier.id_user = user.Id ');
-    while($donnees=$req->fetch())
+      $req=$bdd->query('SELECT user.Prenom AS prenom_user, panier.Marque AS marque_bouteille, panier.Quantite AS quantite FROM panier, user WHERE panier.id_user = user.Id ');
+      while($donnees=$req->fetch())
     {
     ?>
-                        
+    <br>
+     <fieldset>                   
     <p>
-    <strong>Description</strong> :<br />
-
-    Ici pour le test, on affiche le panier de : <?php echo $donnees['prenom_user']; ?> . Il a commande de la <?php echo $donnees['marque_bouteille']; ?> Il en a commande <?php echo $donnees['quantite'] ; ?>
-   </p>               
+      <strong>Description</strong> :<br />
+      Ici pour le test, on affiche le panier de : <?php echo $donnees['prenom_user']; ?> .
+      Il a commande de la <?php echo $donnees['marque_bouteille']; ?>
+      Il en a commande <?php echo $donnees['quantite'] ; ?>
+    </p>  
+    </fieldset>
+    <br>             
     <?php 
     }
     $req->closeCursor();
     ?>
-     </div> 
+  </div> 
 </body>
 <?php include('footer.php') ?>
 </html>

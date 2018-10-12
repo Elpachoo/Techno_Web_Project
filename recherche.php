@@ -68,7 +68,11 @@ catch(Exception $e)
                 ?>
                 <p>
                     <strong>Description</strong> :<br />
-                    Description : <?php echo $donnees['Marque']; ?> est une <?php echo $donnees['Type']; ?>, contenue dans une bouteille en <?php echo $donnees['Materiau']; ?> pour un prix de <?php echo $donnees['Prix']; ?> l'unite, il nous en reste <?php echo $donnees['Quantite']; ?>. On dit aussi <?php echo $donnees['Description']; ?>
+                    <?php echo $donnees['Marque']; ?> est une <?php echo $donnees['Type']; ?>,
+                    contenue dans une bouteille en <?php echo $donnees['Materiau']; ?>
+                    pour un prix de <?php echo $donnees['Prix']; ?> l'unite, 
+                    il nous en reste <?php echo $donnees['Quantite']; ?>. 
+                    On dit aussi <?php echo $donnees['Description']; ?>
                </p>
 
                 <?php
