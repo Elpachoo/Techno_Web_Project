@@ -51,10 +51,26 @@ h2
     font-weight: normal;
 }
 
-#searchbar .bouton{
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    border:none;
-    float:left;
+.bouton{
+    background-color: #e7e7e7;
+    color: black; 
+    border: 2px solid rgb(55, 38, 110); 
+    padding: 6px 20px;
+    margin-right: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+     font-family: 'CaviarDreams_Bold',arial;
+}
+
+
+
+.bouton:hover{
+    background-color: rgb(142, 212, 232); /* Green */
+    color: white;
+    
 }
