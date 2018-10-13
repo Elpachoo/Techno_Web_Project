@@ -43,7 +43,7 @@
         <div id="container"> <!-- Contient 6 produits -->
           <div id="TitrePlate">
             <br><br><br>
-            <h1 class="h1">Eaux plates</h1>
+            <h1 class="h1"> Eaux plates </h1>
             <br>
           </div>
 
