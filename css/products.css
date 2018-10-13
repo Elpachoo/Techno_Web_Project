@@ -75,12 +75,13 @@
   left: 50%;
   width: 170px;
   height: 75px;
-  transform: translate(-50%, 450%);
+  transform: translate(-50%, 400%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
     border-radius: 10px;
     border: 2px solid rgb(55, 38, 110); 
     background-color: #e7e7e7;
+    padding: 6px; 
 }
 
 .donnees:hover .legende{
