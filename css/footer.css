@@ -15,6 +15,11 @@
 	margin: 20px;
 }
 
+.logo_a:hover
+{
+	background-color: #FCFEFF;
+}
+
 .copyright_footer
 {
 	font-family: CaviarDreams;

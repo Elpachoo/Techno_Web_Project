@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<title>My Cart</title>
+  <link rel="icon" href="pictures/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/cart.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
