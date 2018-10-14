@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 12 oct. 2018 à 17:25
+-- Généré le :  Dim 14 oct. 2018 à 12:29
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -86,9 +86,9 @@ INSERT INTO `products` (`id`, `Prix`, `Type`, `Materiau`, `Quantite`, `Marque`, 
 (11, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Fraise', 'C\'est LA meilleure boisson !', 'pictures/volvicfraise.png'),
 (12, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Citron', 'Ah non, c\'est moi LA boisson préférée de tous !', 'pictures/volviccitron.png'),
 (13, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Thé', 'La boisson préférée des pratiquants de yoga !', 'pictures/volvicthe.png'),
-(14, 35, 'Luxe', 'Aluminium', 20, 'Gota', 'Buvez un verre de Gota et voyez vos forces décuplées.', 'pictures/gota.png'),
+(14, 35, 'Luxe', 'Cristal', 20, 'Saint Georges', 'Buvez un verre avec Georges et voyez vos forces décuplées.', 'pictures/stGeorge.png'),
 (15, 50, 'Luxe', 'Ecailles de dragon', 20, 'Ice Landic', 'Cette eau vous transformera en esquimau !', 'pictures/icelandic.png'),
-(16, 75, 'Luxe', 'Obsidienne', 10, 'Bling H2O', 'Une eau invisible, vous ne la boirez pas, vous ne la sentirez pas, vous allez la vivre !', 'pictures/blingh2o.png');
+(16, 75, 'Luxe', 'Obsidienne', 10, 'Voss', 'Une eau invisible, vous ne la boirez pas, vous ne la sentirez pas, vous allez la vivre !', 'pictures/voss.png');
 
 -- --------------------------------------------------------
 
