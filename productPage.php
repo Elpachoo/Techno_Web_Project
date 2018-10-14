@@ -35,7 +35,8 @@
 		?>
 
 		<div class="legende"> <?php echo $donnees['Description']; ?></div>
-		<?php echo $donnees['Marque']; ?>
+		<div class="marque"> <?php echo $donnees['Marque']; ?> </div>
+		
 		<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
 
         <?php 
