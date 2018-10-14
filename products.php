@@ -55,7 +55,7 @@
                 {
               ?>
               <div class="fiche_bouteille">              
-                  <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                   <div class=donnees>
                     <div class="legende"> <?php echo $donnees['Description']; ?></div>
                     <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -90,7 +90,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                    <div class=donnees>
                       <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                       <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -126,7 +126,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                    <div class=donnees>
                       <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                       <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -162,7 +162,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit= <?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                   <div class=donnees>
                     <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                     <h4 > <?php echo $donnees['Marque'];  ?> </h4>
