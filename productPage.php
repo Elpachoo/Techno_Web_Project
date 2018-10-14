@@ -11,7 +11,8 @@
 
 	<?php include("header.php"); ?> 
 
-	<body>
+	<body class="bodyProduct">
+		<!-------------------connexion sql-------------------------->
 		<?php // On se connecte à MySQL
 	      try{
 	        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
@@ -21,33 +22,77 @@
 	        die('Erreur : '.$e->getMessage());
 	      }
 	    ?>
+	    <!-------------------FIN connexion sql-------------------------->
 
-
-
-		<p>Bonjour <?php echo $_GET['produit']; ?> !</p>
-
-		<?php
+		<?php  // on va chercher les infos dans la bdd
 		$req = $bdd->prepare('SELECT * FROM products WHERE Marque = ?');
 		$req -> execute(array($_GET['produit']));
 
 		while($donnees=$req->fetch())
             {
-		?>
+		?>  
+		<!-------------------bloc produit-------------------------->
+		<div class="containerProduit"> 
+			<div class="image">
+				<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
+			</div>
 
-		<div class="legende"> <?php echo $donnees['Description']; ?></div>
-		<div class="marque"> <?php echo $donnees['Marque']; ?> </div>
-		
-		<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
+			<div class="infos">
+				<div class="titrePrix">
+					<p>
+					<h1 class="h1"> <?php echo $donnees['Marque']; ?></h1>
+					<h2 class="h2"> <?php echo $donnees['Type']; ?> </h2>
+					<h2 class="prix"> € <?php echo $donnees['Prix']; ?> </h2>
+					</p>
+				</div>
+				<div class="panierPresentation">
+					<div class="presentation"> 
+						<div class=description>
+							<h3 class="h3"> DESCRIPTION </h3>
+						    <p class="paragraphe"><?php echo $donnees['Description']; ?></p>
+						</div>
+						<div class=materiau>
+							<h3 class="h3"> MATIERE </h3>
+						    <p class="paragraphe">Contenant fait en <?php echo $donnees['Materiau']; ?></p>
+						</div>
+						<div class="stock">
+							<?php
+								if ( $donnees['Quantite']==0) {
+	    							echo "<h3 class='h3'> Stocks épuisés </h3>";
+	   							} else {
+	   								echo "<h3 class='h3'> En stock </h3>";
+								}
+							?>
+						</div>
+					</div> <!-- fin div presentation-->
+
+					<div class = "panier"> 
+
+						<div>
+							<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier"  /> 
+						</div>
+						
+						<div class="number-input">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+							<input class="quantity" step="1" max="10" min="0" name="quantity" value="0" type="number">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+						</div>
+					</div><!-- fin div ppanier-->
+				</div>
+			</div><!-- fin div infos-->
+
+		</div>
+		<!-------------------fin bloc produit-------------------------->
 
         <?php 
             }
             $req->closeCursor();
         ?>
 
-          
+          <?php include('footer.php') ?>
 	</body>
 
-	<?php include('footer.php') ?>
+	
 
 
 </html>
