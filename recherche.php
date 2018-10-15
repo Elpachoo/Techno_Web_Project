@@ -21,6 +21,9 @@ catch(Exception $e)
 }
 ?>
 
+<!-- Indication de la page dans laquelle on se trouve -->
+<?php $page_en_cours = 'menu_rechercher'; ?>
+
 <!-- Ajout de l'header -->
 <?php include("header.php"); ?> 
 

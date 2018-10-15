@@ -22,9 +22,14 @@ catch(Exception $e)
 }
 ?>
 
+<!-- Indication de la page dans laquelle on se trouve -->
+<?php $page_en_cours = 'menu_panier'; ?>
+
+<!-- Ajout de l'header -->
 <header>
 	<?php include("header.php"); ?> 
 </header>
+
 <body class="body">
 	<div class="legende"> 
     <?php 
@@ -63,5 +68,8 @@ catch(Exception $e)
     ?>
   </div> 
 </body>
+
+<!-- Ajout du footer -->
 <?php include('footer.php') ?>
+
 </html>

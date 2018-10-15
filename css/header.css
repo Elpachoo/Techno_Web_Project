@@ -6,8 +6,8 @@ body
 .header
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
-	background-color: #D4F2FF;
-	background-image: url('../pictures/header_background.jpg');
+	background-color: #1fc8db; /* Paramètre pour les navigateurs qui ne prennent pas en charge le dégradé de couleur */
+	background-image: linear-gradient(to top, #9fb8ad, #8dbdb1, #77c1ba, #58c5c9, #1fc8db);
 	background-repeat:no-repeat;
 	background-position:left top;
 	background-size: 100% 100%;
@@ -48,7 +48,7 @@ body
 	padding: 12px;
   text-decoration: none; /* retire le sous-lignage */
   font-size: 25px;
-  border-radius: 4px;
+  border-radius: 35px;
   font-family: CaviarDreams;
   font-weight: bold;
 
@@ -60,29 +60,39 @@ body
   background-color: #FCFEFF;
   color: black;
 }
+
+/* Adapate la taille des icônes du menu */
 .icon_menu
 {
   width: 20px;
-;
 }
 
 /* Met une couleur sur le menu dans lequel on se trouve */
 .SousMenu
 {
-  background-color: #FCFEFF;
+  background-color: white;
   color: #97AAB2;
+  margin: 15px;
 }
 
+/* Change la couleur du menu déconnexion quand on passe la souris dessus */
 #deconnexion:hover
 {
   background-color: #af3e4d;
   color: black;
 }
 
+/* Change la couleur du menu connexion quand on passe la souris dessus */
 #connexion:hover
 {
   background-color: #599F38;
   color: white;
+}
+
+#menu-en-cours
+{
+  background-color: black;
+  color: #97AAB2;
 }
 
 /* paramètre responsive */
