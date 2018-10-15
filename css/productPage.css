@@ -75,8 +75,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background-color: #e7e7e7;
 	color: black; 
    	border: 2px solid rgb(55, 38, 110); 
-    padding: 6px 20px;
-    padding-right: 20px; 
+    padding: 6px 15px;
     margin-right: 0px;
     text-align: center;
     text-decoration: none;
@@ -101,9 +100,13 @@ input[type=number]::-webkit-outer-spin-button {
    padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
-
+   
     background-color: rgb(135,206,250);
 
+}
+
+.img:hover{
+	opacity: 0.8;
 }
 .image{
 	margin-top: 10px;
@@ -111,12 +114,14 @@ input[type=number]::-webkit-outer-spin-button {
 	width:500px;
 	height: 600px;
 	background-color: rgb(135,206,250);
+	 border-radius: 15px 15px 15px 15px;
 }
 
 
 .containerProduit{
 	display: flex;
 	justify-content: center;
+	 border-radius: 3px;
 }
 
 .h1,.h2,.h3,.prix{
@@ -127,14 +132,11 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 10px;
 	margin-top: 10px;
 	height: 600px;
-	width: 500px;
+	width: 600px;
+	margin-left: 10px;
 	background-color: rgb(223,242,255);
+	 border-radius: 15px;
 
-}
-.titrePrix{
-	background-color: rgb(135,206,250);
-	padding-bottom: 20px;
-	padding-top: 20px;
 }
 .panierPresentation{
 	display: flex;
@@ -152,6 +154,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .titrePrix{
 	background-color: rgb(135,206,250);
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	 border-radius: 15px 15px 0px 0px;
 }
 .presentation{
 	padding-right: 30px;
@@ -161,15 +168,9 @@ input[type=number]::-webkit-outer-spin-button {
 .panier{
 	text-align: center;
 	padding-top: 100px;
+	padding-right: 20px;
 }
 	
-	
-}
-.titrePrix {
-	display: inline;
-	padding-left: 30px;
-	text-align: center;
-}
 .titrePrix .h3{
 	padding-right: 30px;
 }
@@ -187,7 +188,6 @@ input[type=number]::-webkit-outer-spin-button {
 .h3{
 	font-size: 30px;
 	color: rgb(142, 212, 232);
-	
 	text-align: center;
 	padding-left: 20px;
 }
@@ -196,5 +196,12 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-left: 20px;
 }
 .prix{
-	font-size: 30px;
+	font-size: 40px;
+
+}
+.ttc{
+	font-family:'SoftLine';
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
 }

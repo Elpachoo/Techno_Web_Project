@@ -43,7 +43,6 @@
 					<p>
 					<h1 class="h1"> <?php echo $donnees['Marque']; ?></h1>
 					<h2 class="h2"> <?php echo $donnees['Type']; ?> </h2>
-					<h2 class="prix"> € <?php echo $donnees['Prix']; ?> </h2>
 					</p>
 				</div>
 				<div class="panierPresentation">
@@ -56,6 +55,7 @@
 							<h3 class="h3"> MATIERE </h3>
 						    <p class="paragraphe">Contenant fait en <?php echo $donnees['Materiau']; ?></p>
 						</div>
+						<br><br>
 						<div class="stock">
 							<?php
 								if ( $donnees['Quantite']==0) {
@@ -68,6 +68,9 @@
 					</div> <!-- fin div presentation-->
 
 					<div class = "panier"> 
+						<h2 class="prix"> € <?php echo $donnees['Prix']; ?> </h2>
+						<h5 class="ttc"> T.T.C </h5>
+						<br><br><br>
 						<div class = quantite>
 							<h3 class="h3"> Quantité </h3>
 						</div>
