@@ -9,6 +9,9 @@
 	    <link rel="stylesheet" href="css/footer.css">
 	</head>
 
+	<!-- Indication de la page dans laquelle on se trouve -->
+	<?php $page_en_cours = 'none'; ?>
+
 	<?php include("header.php"); ?> 
 
 	<body class="bodyProduct">
