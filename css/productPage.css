@@ -1,0 +1,207 @@
+.bodyProduct{
+	font-family:"CaviarDreams";	
+	margin : 0;
+}
+
+/* CSS POUR QUANTITE + -*/
+button:hover {
+	opacity: 0.6;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 2px solid  ;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+  background-color:  rgb(222, 253, 255);
+}
+
+.number-input button {
+  outline:none;
+  -webkit-appearance: none;
+  background-color: rgb(135,206,250);
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: black; /* couleur caractere +-*/
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type=number] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: .5rem;
+  border: solid rgb(135,206,250) ;
+  border-width: 0 2px;
+  font-size: 30px;
+  height: 50px;
+  text-align: center;
+}
+/******************* FIN CSS POUR QUANTITE + -***********************/
+
+
+.bouton{
+	background-color: #e7e7e7;
+	color: black; 
+   	border: 2px solid rgb(55, 38, 110); 
+    padding: 6px 15px;
+    margin-right: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 3px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+     font-family: 'CaviarDreams_Bold',arial;
+}
+
+.bouton:hover{
+	background-color: rgb(142, 212, 232); /* Green */
+    color: white; 
+}
+
+.img{
+    display: block;
+    max-height:500px;
+    max-width:400px;
+    opacity: 1;
+   padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+   
+    background-color: rgb(135,206,250);
+
+}
+
+.img:hover{
+	opacity: 0.8;
+}
+.image{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width:500px;
+	height: 600px;
+	background-color: rgb(135,206,250);
+	 border-radius: 15px 15px 15px 15px;
+}
+
+
+.containerProduit{
+	display: flex;
+	justify-content: center;
+	 border-radius: 3px;
+}
+
+.h1,.h2,.h3,.prix{
+	display: inline;
+	text-align: center;
+}
+.infos{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 600px;
+	width: 600px;
+	margin-left: 10px;
+	background-color: rgb(223,242,255);
+	 border-radius: 15px;
+
+}
+.panierPresentation{
+	display: flex;
+	
+	justify-content: space-between;
+	background-color: rgb(223,242,255);
+	
+}
+
+.panierPresentation{
+	padding-top: 50px;
+	display: flex;
+	background-color: rgb(223,242,255);
+	
+}
+.titrePrix{
+	background-color: rgb(135,206,250);
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	 border-radius: 15px 15px 0px 0px;
+}
+.presentation{
+	padding-right: 30px;
+	padding-left: 30px:;
+	text-align: center;
+}
+.panier{
+	text-align: center;
+	padding-top: 100px;
+	padding-right: 20px;
+}
+	
+.titrePrix .h3{
+	padding-right: 30px;
+}
+.titrePrix .h1{
+	padding-right: 30px;
+}
+
+
+.h1{
+	font-size: 40px;
+	font-family: 'CaviarDreams_Bold';
+	color: rgb(1, 49, 180);
+	
+}
+.h3{
+	font-size: 30px;
+	color: rgb(142, 212, 232);
+	text-align: center;
+	padding-left: 20px;
+}
+.paragraphe{
+	font-size: 20px;
+	padding-left: 20px;
+}
+.prix{
+	font-size: 40px;
+
+}
+.ttc{
+	font-family:'SoftLine';
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+}

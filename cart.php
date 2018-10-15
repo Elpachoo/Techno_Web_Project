@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
 	<title>My Cart</title>
+  <link rel="icon" href="pictures/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/cart.css">
   <link rel="stylesheet" type="text/css" href="css/header.css">
   <link rel="stylesheet" type="text/css" href="css/footer.css">
@@ -21,9 +22,14 @@ catch(Exception $e)
 }
 ?>
 
+<!-- Indication de la page dans laquelle on se trouve -->
+<?php $page_en_cours = 'menu_panier'; ?>
+
+<!-- Ajout de l'header -->
 <header>
 	<?php include("header.php"); ?> 
 </header>
+
 <body class="body">
 	<div class="legende"> 
     <?php 
@@ -60,5 +66,8 @@ catch(Exception $e)
     ?>
   </div> 
 </body>
+
+<!-- Ajout du footer -->
 <?php include('footer.php') ?>
+
 </html>

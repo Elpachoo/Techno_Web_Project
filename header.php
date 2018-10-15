@@ -1,5 +1,4 @@
 <header>
-
 	<!-- On lance une session directement depuis le header -->
 	<?php session_start(); ?>
 
@@ -8,26 +7,45 @@
 			<a href="home.php" class="titre"><span>Water  Life</span></a>
 		</div>
 		<div class="MenuCategory">
-			<a class="SousMenu" href="home.php"><span>Accueil</span></a>
-			<a class="SousMenu" href="products.php"><span>Produits</span></a>
-			<a class="SousMenu" href="recherche.php"><span>Rechercher</span></a>
+			<a class="SousMenu" href="home.php" <?php if ($page_en_cours == 'menu_accueil') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/accueil.png">&nbsp;<span>Accueil</span>
+			</a>
+
+			<a class="SousMenu" href="products.php" <?php if ($page_en_cours == 'menu_produits') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/bouteille.png">&nbsp;<span>Produits</span>
+			</a>
+
+			<a class="SousMenu" href="recherche.php" <?php if ($page_en_cours == 'menu_rechercher') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/chercher.png">&nbsp;<span>Rechercher</span>
+			</a>
 
 			<!-- On vérifie si l'utilisateur est connecté ou non, si OUI, on affiche l'onglet panier, si NON, on affiche rien -->
 			<?php
             if(isset($_SESSION['login']))
             {
             ?>
-            <a class="SousMenu" href="cart.php"><span>Panier</span></a>
-            <a class="SousMenu" href="signin.php"><span>Mon Compte</span></a>
+
+            <a class="SousMenu" href="cart.php" <?php if ($page_en_cours == 'menu_panier') {echo ' id="menu-en-cours"';} ?>>
+            	<img class="icon_menu" src="icons/caddie.png">&nbsp;<span>Panier</span>
+            </a>
+
+            <a class="SousMenu" href="signin.php" <?php if ($page_en_cours == 'menu_moncompte') {echo ' id="menu-en-cours"';} ?>>
+            	<img class="icon_menu" src="icons/utilisateur.png">&nbsp;<span>Mon Compte</span>
+            </a>
+
+            <a class="SousMenu" id="deconnexion" href="deconnexion.php"><img class="icon_menu" src="icons/deconnexion.png">&nbsp;<span>Déconnexion</span></a>
+
             <?php 
         	}
         	else
         	{
         	?>
-			<a class="SousMenu" href="connexion.php"><span>Connexion</span></a>
-			<?php } ?>
 
-			<a class="deconnexion" href="deconnexion.php"><img src="http://icons.iconarchive.com/icons/mysitemyway/clean-3d/256/glossy-3d-blue-delete-icon.png" id="bouton_deconnexion"></a>
+			<a class="SousMenu" href="connexion.php" <?php if ($page_en_cours == 'menu_connexion') {echo ' id="menu-en-cours"';} else { echo 'id=connexion';} ?>>
+				<img class="icon_menu" src="icons/entrer.png">&nbsp;<span>Connexion</span>
+			</a>
+
+			<?php } ?>
 		</div>
 	</div>
 </header>
