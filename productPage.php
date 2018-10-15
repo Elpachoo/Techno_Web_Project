@@ -33,6 +33,7 @@
 		?>  
 		<!-------------------bloc produit-------------------------->
 		<div class="containerProduit"> 
+			<div class="englobe"></div>
 			<div class="image">
 				<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
 			</div>
@@ -58,30 +59,33 @@
 						<div class="stock">
 							<?php
 								if ( $donnees['Quantite']==0) {
-	    							echo "<h3 class='h3'> Stocks épuisés </h3>";
+	    							echo "<h3 class='h3'>Stocks épuisés</h3>";
 	   							} else {
-	   								echo "<h3 class='h3'> En stock </h3>";
+	   								echo "<h3 class='h3'>En stock</h3>";
 								}
 							?>
 						</div>
 					</div> <!-- fin div presentation-->
 
 					<div class = "panier"> 
-
-						<div>
-							<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier"  /> 
+						<div class = quantite>
+							<h3 class="h3"> Quantité </h3>
 						</div>
-						
 						<div class="number-input">
 							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
 							<input class="quantity" step="1" max="10" min="0" name="quantity" value="0" type="number">
 							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
 						</div>
+						<br><br>
+						<div>
+							<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier"  /> 
+						</div>
+
 					</div><!-- fin div ppanier-->
 				</div>
 			</div><!-- fin div infos-->
-
-		</div>
+			</div>
+		</div><!-- fin div containerProduit-->
 		<!-------------------fin bloc produit-------------------------->
 
         <?php 
