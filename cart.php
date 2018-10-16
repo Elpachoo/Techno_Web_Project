@@ -29,8 +29,13 @@ catch(Exception $e)
 <header>
 	<?php include("header.php"); ?> 
 </header>
+<<<<<<< HEAD
 <?php echo $_SESSION['login'];
   echo $_SESSION['id_user']; ?>
+=======
+<?php echo $_SESSION['login']; echo $_SESSION['user_id']; ?>
+
+>>>>>>> Dynamic_V1
 <body class="body">
 	<div class="legende"> 
     <?php 

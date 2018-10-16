@@ -40,6 +40,7 @@
 
 				if($count == 1)
 				{
+<<<<<<< HEAD
 					while ($row = $res->fetch_assoc()) 
 					{
         			$_SESSION['login'] = $row['Login'];
@@ -49,6 +50,11 @@
 					
 
 					
+=======
+					$_SESSION['login'] = $login;
+					$user_id = "SELECT id FROM user WHERE '$login'=Login";
+					header("Location: products.php");
+>>>>>>> Dynamic_V1
 				}
 				else echo "Identifiant ou mot de passe incorrect";
 			}
