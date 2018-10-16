@@ -11,6 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 
+<!-- Indication de la page dans laquelle on se trouve -->
+<?php $page_en_cours = 'none'; ?>
+
 <!-- Ajout de l'header -->
 <?php include("header.php"); ?> 
 

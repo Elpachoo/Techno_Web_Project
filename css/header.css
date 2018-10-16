@@ -7,10 +7,7 @@ body
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
 	background-color: #1fc8db; /* Paramètre pour les navigateurs qui ne prennent pas en charge le dégradé de couleur */
-	background-image: linear-gradient(to top, #9fb8ad, #8dbdb1, #77c1ba, #58c5c9, #1fc8db);
-	background-repeat:no-repeat;
-	background-position:left top;
-	background-size: 100% 100%;
+	background-image: linear-gradient(to top, #77c1ba, #69c3c1, #58c5c8, #42c7d1, #1fc8db);
 	width: 100%;
 	font-family: 'CaviarDreams';	
 }

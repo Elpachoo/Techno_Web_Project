@@ -9,6 +9,9 @@
 	    <link rel="stylesheet" href="css/footer.css">
 	</head>
 
+	<!-- Indication de la page dans laquelle on se trouve -->
+	<?php $page_en_cours = 'none'; ?>
+
 	<?php include("header.php"); ?> 
 
 	<body class="bodyProduct">
@@ -33,7 +36,6 @@
 		?>  
 		<!-------------------bloc produit-------------------------->
 		<div class="containerProduit"> 
-			<div class="englobe"></div>
 			<div class="image">
 				<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
 			</div>
@@ -55,7 +57,7 @@
 							<h3 class="h3"> MATIERE </h3>
 						    <p class="paragraphe">Contenant fait en <?php echo $donnees['Materiau']; ?></p>
 						</div>
-						<br><br>
+						<br><br><br>
 						<div class="stock">
 							<?php
 								if ( $donnees['Quantite']==0) {
@@ -67,27 +69,57 @@
 						</div>
 					</div> <!-- fin div presentation-->
 
+					
+
 					<div class = "panier"> 
 						<h2 class="prix"> € <?php echo $donnees['Prix']; ?> </h2>
 						<h5 class="ttc"> T.T.C </h5>
 						<br><br><br>
+
+						<?php //SI on est connecte
+            				if(isset($_SESSION['login']))
+           					{
+            			?>
 						<div class = quantite>
 							<h3 class="h3"> Quantité </h3>
 						</div>
 						<div class="number-input">
+							
 							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-							<input class="quantity" step="1" max="10" min="0" name="quantity" value="0" type="number">
+							<form method="post" action="productPage.php?produit=<?php echo $donnees['Marque'];?>">
+								<input class="quantity" step="1" max="10" min="0"  name="quantity" value="0" type="number">
+							</form>
 							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+							
 						</div>
 						<br><br>
 						<div>
-							<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier"  /> 
+							<form method="post" action="productPage.php?produit=<?php echo $donnees['Marque'];?>">
+								<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier" /> 
+							</form>
 						</div>
+						<?php
+    						if(isset($_POST['submit'])){ // si formulaire soumis
+    					?>
+						
+    					<div>salut salut <?php echo $_POST['quantity']; ?></div>	
+						<?php }?>
+						 
+        				<?php  }else{   ?> <!--si on n'est pas co-->
+        				
+        				<div class="conn"> 
+        					<a class="connexionlien" href="connexion.php">
+        						<div class="souligne"> Se connecter</div> pour accéder au panier 
+        					</a>
+        					<br>
+        					<img class="panier" src="icons/caddie.png">
+        				</div>
+        				<?php } ?>
 
 					</div><!-- fin div ppanier-->
-				</div>
-			</div><!-- fin div infos-->
-			</div>
+        		</div><!--fin div panier presentation-->
+
+			</div><!--fin div infos-->
 		</div><!-- fin div containerProduit-->
 		<!-------------------fin bloc produit-------------------------->
 

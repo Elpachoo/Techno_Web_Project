@@ -1,6 +1,6 @@
 .footer
 {
-	background-color: #97AAB2;
+	background-image: linear-gradient(to bottom, #77c1ba, #69c3c1, #58c5c8, #42c7d1, #1fc8db);
 	width: 100%;
 	overflow: hidden;
 }
