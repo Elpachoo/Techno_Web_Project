@@ -82,31 +82,26 @@
             			?>
 						<div class = quantite>
 							<h3 class="h3"> Quantité </h3>
+							<br><br><br>
 						</div>
 
 						<div class="number-input">
-							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-
+							<button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
 							<form method="post" action="productPage.php?produit=<?php echo $donnees['Marque'];?>">
-								<input class="quantity" step="1" max="10" min="0"  name="quantity" value="0" type="number">	
-								<input class="bouton" type="submit" name="submit"  value="Ajouter au Panier" />
+								<input id="btnI" class="quantity" step="1" max="10" min="0"  name="quantity" value="0" type="number">	
+								<br><br>
+								<input id="btnA" class="boutonAjouter" type="submit" name="submit"  value="Ajouter au Panier" />
 							</form>
-							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
-
-							
-						</div>
+							<button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
+						</div> <!--fin number-input -->
 						<br><br>
-						<div>
-							
-						</div>
+						
 						<?php
     						if(isset($_POST['submit'])){ // si formulaire soumis
     						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL; 
+    					}
     					?>
-    					<div>salut salut <?php echo $truc; ?></div>
-                		<?php }?>
-                		
-                		 
+          		 
         				<?php  }else{   ?> <!--si on n'est pas co-->
         				
         				<div class="conn"> 
