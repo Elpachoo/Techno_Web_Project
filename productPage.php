@@ -103,11 +103,8 @@
     						if(isset($_POST['submit'])){ // si formulaire soumis
     						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL; 
     					?>
-    					
-    				
-    					 <div>salut salut <?php echo $truc; ?></div>
-
-                		 <?php }?>
+    					<div>salut salut <?php echo $truc; ?></div>
+                		<?php }?>
                 		
                 		 
         				<?php  }else{   ?> <!--si on n'est pas co-->
