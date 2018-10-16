@@ -29,12 +29,14 @@ catch(Exception $e)
 <header>
 	<?php include("header.php"); ?> 
 </header>
-<?php echo $_SESSION['login']; echo $_SESSION['user_id']; ?>
+
+<?php echo $_SESSION['login'];
+  echo $_SESSION['id_user']; ?>
 
 <body class="body">
 	<div class="legende"> 
     <?php 
-      $req=$bdd->query('SELECT products.Description AS description,panier.Prix AS prix, user.Prenom AS prenom_user, panier.Marque AS marque_bouteille, panier.Quantite AS quantite,products.Image AS image FROM panier, user,products WHERE panier.id_user = user.Id and panier.Marque=products.Marque');
+      $req=$bdd->query('SELECT products.Description AS description,panier.Prix AS prix, panier.Marque AS marque_bouteille, panier.Quantite AS quantite,products.Image AS image FROM panier,products WHERE panier.id_user ='.$_SESSION['id_user'].' and panier.Marque=products.Marque');
       while($donnees=$req->fetch())
     {
     ?>
@@ -42,7 +44,7 @@ catch(Exception $e)
      <fieldset>                   
     <p>
       <table>
-          <caption><strong>Panier de <?php echo $donnees['prenom_user']; ?></strong></caption>
+          <caption><strong>Panier de <?php echo $_SESSION['login']; ?></strong></caption>
 
               <tr>
                     <th style="width:400px; height:50px;">Photo du Produit</th>

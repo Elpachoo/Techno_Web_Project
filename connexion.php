@@ -40,9 +40,14 @@
 
 				if($count == 1)
 				{
-					$_SESSION['login'] = $login;
-					$user_id = "SELECT id FROM user WHERE '$login'=Login";
-					header("Location: products.php");
+
+					while ($row = $res->fetch_assoc()) 
+					{
+        			$_SESSION['login'] = $row['Login'];
+        			$_SESSION['id_user'] = $row['Id'];
+        			header("Location: products.php");
+    				}
+
 				}
 				else echo "Identifiant ou mot de passe incorrect";
 			}
