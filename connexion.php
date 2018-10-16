@@ -41,6 +41,7 @@
 				if($count == 1)
 				{
 					$_SESSION['login'] = $login;
+					$user_id = "SELECT id FROM user WHERE '$login'=Login";
 					header("Location: products.php");
 				}
 				else echo "Identifiant ou mot de passe incorrect";

@@ -29,6 +29,7 @@ catch(Exception $e)
 <header>
 	<?php include("header.php"); ?> 
 </header>
+<?php echo $_SESSION['login']; echo $_SESSION['user_id']; ?>
 
 <body class="body">
 	<div class="legende"> 
