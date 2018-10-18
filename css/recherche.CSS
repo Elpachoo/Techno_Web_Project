@@ -1,18 +1,19 @@
-body
+.bodyRecherche
 {
     background: rgb(252,254,255);
-    font-family: 'Trebuchet MS', Arial;
+    font-family: 'CaviarDreams', Arial;
     color: #181818;
     margin: 0;
 }
 
 #bloc_page
 {
+
     width: 900px;
     margin: auto;
 }
 
- h1
+ .h1
 {
     font-family: 'BallparkWeiner', ;
     font-size: 2em;
@@ -37,13 +38,14 @@ body
     font-family: 'BallparkWeiner', ;
     font-size: 1.5em;
     font-weight: normal;
+    margin-top: 4px;
     width:600px;
-    height:35px;
-    float:left;
-    margin: 0 0 0 0px;
+    height:34px;
+    
+   
 }
 
-h2
+.h2
 {
     font-family: 'BallparkWeiner', ;
     text-align: center;
@@ -55,8 +57,9 @@ h2
     background-color: #e7e7e7;
     color: black; 
     border: 2px solid rgb(55, 38, 110); 
-    padding: 6px 20px;
+    padding: 8px 20px;
     margin-right: 0px;
+    margin-left: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -64,7 +67,8 @@ h2
     border-radius: 3px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
-     font-family: 'CaviarDreams_Bold',arial;
+    font-family: 'CaviarDreams_Bold',arial;
+
 }
 
 
@@ -72,5 +76,71 @@ h2
 .bouton:hover{
     background-color: rgb(142, 212, 232); /* Green */
     color: white;
+}
+
+.description{
+    display: flex;
+
+}
+.img{
+
+    display: block;
+    max-height:300px;
+    max-width:150px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: .3s ease;
+    backface-visibility: hidden;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-top: 25px;
+    margin-bottom: 30px;
+}
+
+.img:hover{
+    opacity: 0.7;
+}
+.para{
+    width: 400px;
+    font-size: 20px;
+
+}
+.lien .a{
+    font-family: "CaviarDreams_Bold";
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.underligned{
+    text-decoration: underline;
+}
+.underligned2{
+    text-decoration: underline;
+   padding: 10px;
+  
+   font-size: 20px;
+}
+
+.img2{
+   display: block;
+    max-height:200px;
+    max-width:100px;
+   
+    opacity: 1;
+    padding-top: 40px;
+    padding-bottom: 30px;
     
 }
+
+.produitsup{
+    display: flex;
+    justify-content: space-around;
+     margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
