@@ -67,6 +67,10 @@
 				Connexion
 			</legend>
 
+			<div class="image_logo">
+				<img src="pictures/WaterLife_V2.png">
+			</div>
+
 			<form method="POST" action="connexion.php">
 				<div class="champ_a_remplir" id="login_connexion">
 					<div class="box">
@@ -93,6 +97,12 @@
 					<button type="submit" class="bouton_connexion" value="Submit" name="connexion">
 						<span id="bouton_connexion">Se connecter</span>
 					</button>
+				</div>
+
+				<div class="s_inscrire">
+					<span id="texte-inscrire">
+						Pas encore inscrit ? Pas de soucis, <a id="redirection_inscription" href="#">cliquez ici</a>  ! :)
+					</span>
 				</div>
 			</form>
 		</fieldset>
