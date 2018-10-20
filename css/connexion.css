@@ -3,119 +3,141 @@ body
     margin: 0;
 }
 
-#bloc_page
+.connexion
 {
-    width: 900px;
-    margin: auto;
+    width: 50%;
+    margin: 0 auto;
 }
 
-body > h1 
+fieldset
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 0px;
+    /*background-image: radial-gradient(circle, #afcfff, #97bdff, #82aaff, #7496ff, #6c80ff);*/
+    background-color: #DFF2FF;
+    padding-top: 75px;
+    border-radius: 15px;
+    border: 3px solid;
+    margin: 50px;
 }
 
 #titre_connexion
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 300px;   
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 50000px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: CaviarDreams_bold;
 }
 
-#message_indication
-{
-    font-family: 'BallparkWeiner', ;
-    font-size: 2.5em;
-    font-weight: normal;
-    margin: 0 0 0 300px;
-}
-
-
-/* Formulaire inscription et formulaire connexion */
-
-#formulaire_connexion
+.champ_a_remplir
 {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    width:730px;
-
+    margin-bottom: 20px;
+    border-radius: 5000px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-#formulaire_inscription
+.box
 {
     display: flex;
-    flex-direction: column;    
-    margin: auto;
-    width:730px;
 }
 
-#logo
+.input
 {
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
+    width: 100%;
 }
 
-#logo img
+.input_champ
 {
-    width: 177px;
-    height: 180px;
+    width: 100%;
+    padding: 25px;
+    border: none;
+    border-radius: 5000px;
+    font-size: 20px;
 }
 
-/* Titres de mes fichiers */
-
-#titre_principal_inscription, h1
+/* Change la couleur du place holder */
+.input_champ::placeholder
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 2em;
-    font-weight: normal;
-    margin: 0 0 0 200px;
+    color: #000;
+    opacity: 1;
+    font-size: 20px;
 }
 
-#titre_principal_inscription h2
+/* Ajoute une couleur de fond sur l'élément sur lequel je me trouve */
+.input_champ:focus
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 1.5em;
-    font-weight: normal;
-    flex-direction: column;
-    margin: 300 0 0 100px;
+    background-color: #EDE3FE;
 }
 
-#second_titre h2
+/* Ajoute une bordure si l'élément est remplie */
+.input_champ:valid
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 1.5em;
-    font-weight: normal;
-    flex-direction: column;
-    margin: 0 0 0 320px;
+    border: 3px solid;
+    border-color: #008a5b;
 }
 
-#formulaire_inscription h2
+#box_login, #box_mdp
 {
-    font-family: 'BallparkWeiner', ;
-    font-size: 1.5em;
-    font-weight: normal;
-    flex-direction: column;
-    margin: 0 0 0 250px;
+    height: 15px;
 }
 
-/* Footer */
-footer
+.se_connecter
 {
-    flex-direction: row;
-    display: flex;
-    padding-right: 0px;
-    margin: 0 0 0 0px;
+    text-align: center;
 }
 
-footer h1
+.bouton_connexion
 {
-    font-size: 1.5em;
-    font-family: 'BallparkWeiner', ;
-    font-weight: normal;
-    margin: 0 0 0 100px;
+    background-color: #E7E7E7;
+    border: 3px solid;
+    border-radius: 12px;
+}
+
+.icone_seconnecter
+{
+    background-image: url('../icons/cadenas-ferme.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 50px;
+    padding: 5px;
+}
+
+.icone_seconnecter:hover
+{
+    background-image: url('../icons/cadenas-ouvert.png');
+
+}
+
+#bouton_connexion
+{
+    display: block; /* Permet de considérer le span comme un bloc et lui appliquer des paramètres de position */
+    font-family: CaviarDreams_bold;
+    font-size: 35px;
+    margin: 5px;
+}
+
+.icones
+{
+    align-self: center;
+    padding-right: 10px;
+}
+
+.connexion > img
+{
+    width: 45px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.bouton_connexion:hover
+{
+    background-color: #8ED4E8;
 }
