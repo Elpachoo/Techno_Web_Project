@@ -32,35 +32,43 @@
 		$req -> execute(array($_GET['produit']));
 
 		while($donnees=$req->fetch())
-            {
-		?>  
+            { 
+            	$_SESSION['prix']=$donnees['Prix'];
+            	$_SESSION['marque']=$donnees['Marque'];
+            	$_SESSION['type']=$donnees['Type'];
+            	$_SESSION['description']=$donnees['Description'];
+            	$_SESSION['materiau']=$donnees['Materiau'];
+            	$_SESSION['quantite']=$donnees['Quantite'];
+            	$_SESSION['image']=$donnees['Image'];
+
+            		} $req->closeCursor()	?>  
 		<!-------------------bloc produit-------------------------->
 		<div class="containerProduit"> 
 			<div class="image">
-				<img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> 
+				<img class="img" src="<?php echo $_SESSION['image'];?>" alt="Product" /> 
 			</div>
 
 			<div class="infos">
 				<div class="titrePrix">
 					<p>
-					<h1 class="h1"> <?php echo $donnees['Marque']; ?></h1>
-					<h2 class="h2"> <?php echo $donnees['Type']; ?> </h2>
+					<h1 class="h1"> <?php echo $_SESSION['marque']; ?></h1>
+					<h2 class="h2"> <?php echo $_SESSION['type']; ?> </h2>
 					</p>
 				</div>
 				<div class="panierPresentation">
 					<div class="presentation"> 
 						<div class=description>
 							<h3 class="h3"> DESCRIPTION </h3>
-						    <p class="paragraphe"><?php echo $donnees['Description']; ?></p>
+						    <p class="paragraphe"><?php echo $_SESSION['description']; ?></p>
 						</div>
 						<div class=materiau>
 							<h3 class="h3"> MATIERE </h3>
-						    <p class="paragraphe">Contenant fait en <?php echo $donnees['Materiau']; ?></p>
+						    <p class="paragraphe">Contenant fait en <?php echo $_SESSION['materiau']; ?></p>
 						</div>
 						<br><br><br>
 						<div class="stock">
 							<?php
-								if ( $donnees['Quantite']==0) {
+								if ( $_SESSION['quantite']==0) {
 	    							echo "<h3 class='h3'>Stocks épuisés</h3>";
 	   							} else {
 	   								echo "<h3 class='h3'>En stock</h3>";
@@ -72,7 +80,7 @@
 					
 
 					<div class = "panier"> 
-						<h2 class="prix"> € <?php echo $donnees['Prix']; ?> </h2>
+						<h2 class="prix"> € <?php echo $_SESSION['prix']; ?> </h2>
 						<h5 class="ttc"> T.T.C </h5>
 						<br><br><br>
 
@@ -98,8 +106,20 @@
 						
 						<?php
     						if(isset($_POST['submit'])){ // si formulaire soumis
-    						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL; 
+    						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL;
+    						$_SESSION['quantity_choice']=$truc;
+    						$req = $bdd->prepare('INSERT INTO panier(id_user, Marque, Quantite, Prix, Type, Materiau) VALUES(:id_user, :Marque, :Quantite, :Prix, :Type, :Materiau)');
+							$req->execute(array(
+							'id_user' => $_SESSION['id_user'],
+							'Marque' => $_SESSION['marque'],
+							'Quantite' => $_SESSION['quantity_choice'],
+							'Prix' => $_SESSION['prix'],
+							'Type' => $_SESSION['type'],
+							'Materiau' => $_SESSION['materiau']
+									));        			
+
     					}
+    					$req->closeCursor();
     					?>
           		 
         				<?php  }else{   ?> <!--si on n'est pas co-->
@@ -121,7 +141,7 @@
 		<!-------------------fin bloc produit-------------------------->
 
         <?php 
-            }
+            
             $req->closeCursor();
         ?>
 
