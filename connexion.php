@@ -40,8 +40,14 @@
 
 				if($count == 1)
 				{
-					$_SESSION['login'] = $login;
-					header("Location: products.php");
+
+					while ($row = $res->fetch_assoc()) 
+					{
+        			$_SESSION['login'] = $row['Login'];
+        			$_SESSION['id_user'] = $row['Id'];
+        			header("Location: products.php");
+    				}
+
 				}
 				else echo "Identifiant ou mot de passe incorrect";
 			}
@@ -55,31 +61,51 @@
     ?>
 
 <body>
-	<h1 id="titre_connexion"> Bienvenue sur la page de connexion ! </h1>
-	<br>
-	<br>
-	<div id="bloc_page">
-		<p> 
-			Ravi de vous revoir cher client, rentrez vos identifiants afin d'accéder à tous nos services. En cas de problème de connexion, veuillez contacter notre service d'aide.
-		</p>
-		<div id="logo">
-			<img src="pictures/connexion_logo.jpg" alt="Logo de connexion" />   
-		</div>
-		<br>
-		<br>          
-		<div id="formulaire_connexion">
+	<div class="connexion">
+		<fieldset>
+			<legend id="titre_connexion">
+				Connexion
+			</legend>
+
+			<div class="image_logo">
+				<img src="pictures/WaterLife_V2.png">
+			</div>
+
 			<form method="POST" action="connexion.php">
-				<div data-validate="prout">
-					<input type="text" name ="login" placeholder="Veuillez entrer votre login"/>
+				<div class="champ_a_remplir" id="login_connexion">
+					<div class="box">
+						<i class="icones" id="icone_login"><img src="icons/utilisateur-neutre.png"></i>
+					</div>
+
+					<div class="input">
+						<input class="input_champ" type="text" name="login" placeholder="Login/Adresse-mail" id="box_login" required>
+					</div>	
 				</div>
-					<input type="password" name="mot_de_passe" placeholder="Veuillez entrer votre mot de passe" />
-					<button type="submit" name="connexion" value="Submit">
-						Se connecter
+
+				<div class="champ_a_remplir" id="mot_de_passe_connexion">
+					<div class="box">
+						<i class="icones" id="icone_mdp"><img src="icons/mot-de-passe.png"></i>
+					</div>
+
+					<div class="input">
+						<input class="input_champ" type="password" name="mot_de_passe" placeholder="Mot de passe" id="box_mdp" required>
+					</div>
+				</div>
+
+				<div class="se_connecter">
+					<div class="icone_seconnecter"></div>
+					<button type="submit" class="bouton_connexion" value="Submit" name="connexion">
+						<span id="bouton_connexion">Se connecter</span>
 					</button>
+				</div>
+
+				<div class="s_inscrire">
+					<span id="texte-inscrire">
+						Pas encore inscrit ? Pas de soucis, <a id="redirection_inscription" href="#">cliquez ici</a>  ! :)
+					</span>
+				</div>
 			</form>
-		</div>
-			<br>
-			<br>	
+		</fieldset>
 	</div>
 </body>
 

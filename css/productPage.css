@@ -20,15 +20,22 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input {
-  border: 2px solid  ;
-  display: inline-flex;
+  
+  display: flex; 
 }
 
-.number-input,
-.number-input * {
-  box-sizing: border-box;
-  background-color:  rgb(222, 253, 255);
+.quantity{
+	font-family: sans-serif;
+  	width: 20px;
+  	border: solid  rgb(223,242,255);
+  	border-width: 0 2px;
+  	font-size: 30px;
+  	height: 50px;
+  	text-align: center;
+	background-color:  rgb(223,242,255);
 }
+
+
 
 .number-input button {
   outline:none;
@@ -54,24 +61,14 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: black; /* couleur caractere +-*/
   transform: translate(-50%, -50%);
 }
-.number-input button.plus:after {
+.number-input button.btnPlus:after {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.number-input input[type=number] {
-  font-family: sans-serif;
-  max-width: 5rem;
-  padding: .5rem;
-  border: solid rgb(135,206,250) ;
-  border-width: 0 2px;
-  font-size: 30px;
-  height: 50px;
-  text-align: center;
-}
 /******************* FIN CSS POUR QUANTITE + -***********************/
 
 
-.bouton{
+.boutonAjouter{
 	background-color: #e7e7e7;
 	color: black; 
    	border: 2px solid rgb(55, 38, 110); 
@@ -80,14 +77,14 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 3px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
      font-family: 'CaviarDreams_Bold',arial;
 }
 
-.bouton:hover{
+.boutonAjouter:hover{
 	background-color: rgb(142, 212, 232); /* Green */
     color: white; 
 }
@@ -97,7 +94,7 @@ input[type=number]::-webkit-outer-spin-button {
     max-height:500px;
     max-width:400px;
     opacity: 1;
-   padding-top: 30px;
+    padding-top: 30px;
     margin-left: auto;
     margin-right: auto;
    

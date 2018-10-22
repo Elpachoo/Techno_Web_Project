@@ -29,7 +29,7 @@
             	<img class="icon_menu" src="icons/caddie.png">&nbsp;<span>Panier</span>
             </a>
 
-            <a class="SousMenu" href="signin.php" <?php if ($page_en_cours == 'menu_moncompte') {echo ' id="menu-en-cours"';} ?>>
+            <a class="SousMenu" href="monCompte.php" <?php if ($page_en_cours == 'menu_moncompte') {echo ' id="menu-en-cours"';} ?>>
             	<img class="icon_menu" src="icons/utilisateur.png">&nbsp;<span>Mon Compte</span>
             </a>
 
