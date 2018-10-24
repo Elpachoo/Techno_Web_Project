@@ -9,6 +9,31 @@ body
     margin: 0 auto;
 }
 
+.alert
+{
+    padding: 20px;
+    background-color: #f66358;
+    color: white;
+    font-family: CaviarDreams_bold;
+}
+
+.closebtn
+{
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 40px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover 
+{
+    color: black;
+}
+
 fieldset
 {
     /*background-image: radial-gradient(circle, #afcfff, #97bdff, #82aaff, #7496ff, #6c80ff);*/
@@ -46,6 +71,11 @@ fieldset
     border-radius: 5000px;
     margin-left: 20px;
     margin-right: 20px;
+}
+
+#login_connexion
+{
+    margin-top: 50px;
 }
 
 .box

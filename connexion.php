@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title> Page de connexion !!</title>
+	<title>Se connecter</title>
 	<link rel="icon" href="pictures/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/connexion.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -49,7 +49,10 @@
     				}
 
 				}
-				else echo "Identifiant ou mot de passe incorrect";
+				else echo " <div class='alert'>
+  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+  								Identifiant ou mot de passe incorrect
+							</div> ";
 			}
 		}
 	?>
@@ -67,9 +70,11 @@
 				Connexion
 			</legend>
 
+			<!-- Ajout Logo ou non au choix, à voir 
 			<div class="image_logo">
 				<img src="pictures/WaterLife_V2.png">
 			</div>
+			-->
 
 			<form method="POST" action="connexion.php">
 				<div class="champ_a_remplir" id="login_connexion">
@@ -101,7 +106,7 @@
 
 				<div class="s_inscrire">
 					<span id="texte-inscrire">
-						Pas encore inscrit ? Pas de soucis, <a id="redirection_inscription" href="#">cliquez ici</a>  ! :)
+						Pas encore inscrit ? Pas de soucis, <a id="redirection_inscription" href="inscription.php">cliquez ici</a>  ! :)
 					</span>
 				</div>
 			</form>
