@@ -1,34 +1,15 @@
-@font-face {
-    font-family: 'SoftLine';
-    src: url('../fonts/SoftLine.otf') ;
+body
+{
+  margin: 0;
 }
-@font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams.ttf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams_Bold';
-    src: url('../fonts/CaviarDreams_Bold.ttf') ;
-}
-@font-face {
-    font-family: 'futur';
-    src: url('../fonts/FUTRFW.ttf') ;
-}
-
-
 
 .header
 {
 	overflow: hidden; /* permet d'élargir la couleur du fond à TOUTE la div */
-	background-color: #D4F2FF;
-	background-image: url('pictures/header_background.jpg');
-	background-repeat:no-repeat;
-	background-position:left top;
-	background-size: 100% 100%;
+	background-color: #1fc8db; /* Paramètre pour les navigateurs qui ne prennent pas en charge le dégradé de couleur */
+	background-image: linear-gradient(to top, #77c1ba, #69c3c1, #58c5c8, #42c7d1, #1fc8db);
 	width: 100%;
-	font-family: 'CaviarDreams';
-
-	
+	font-family: 'CaviarDreams';	
 }
 
 /* placement du containeur logo */
@@ -49,6 +30,14 @@
   font-family: 'futur'; 
 }
 
+.MenuCategory 
+{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px; /* Décalle de 15px vers le haut les catégories */
+}
+
+
 .SousMenu
 {
 	color : black;
@@ -56,9 +45,8 @@
 	padding: 12px;
   text-decoration: none; /* retire le sous-lignage */
   font-size: 25px;
-  line-height: 25px;
-  border-radius: 4px;
-  font-family: Softline;
+  border-radius: 35px;
+  font-family: CaviarDreams;
   font-weight: bold;
 
 }
@@ -70,32 +58,46 @@
   color: black;
 }
 
-
+/* Adapate la taille des icônes du menu */
+.icon_menu
+{
+  width: 20px;
+}
 
 /* Met une couleur sur le menu dans lequel on se trouve */
 .SousMenu
 {
-  background-color: #FCFEFF;
+  background-color: white;
   color: #97AAB2;
+  margin: 15px;
 }
 
-.MenuCategory 
+/* Change la couleur du menu déconnexion quand on passe la souris dessus */
+#deconnexion:hover
 {
-  text-align: center;
-  margin-bottom: 15px; /* Décalle de 15px vers le haut les catégories */
+  background-color: #af3e4d;
+  color: black;
+}
+
+/* Change la couleur du menu connexion quand on passe la souris dessus */
+#connexion:hover
+{
+  background-color: #599F38;
+  color: white;
+}
+
+#menu-en-cours
+{
+  background-color: black;
+  color: #97AAB2;
 }
 
 /* paramètre responsive */
 @media screen and (max-width: 500px) 
 {
-  .header a 
+  .SousMenu 
   {
     float: none;
     display: block;
-    text-align: left;
-  }
-  .MenuCategory 
-  {
-    float: none;
   }
 }

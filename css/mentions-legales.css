@@ -1,0 +1,16 @@
+.body
+{
+	font-family: CaviarDreams;
+	font-size: 20px;
+}
+
+.body_div
+{
+	margin: 5px;
+}
+
+#titre
+{
+	text-align: center;
+	font-size: 100px;
+}
