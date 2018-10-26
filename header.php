@@ -1,14 +1,51 @@
 <header>
+	<!-- On lance une session directement depuis le header -->
+	<?php session_start(); ?>
+
 	<div class="header">
 		<div class="logo_div">
 			<a href="home.php" class="titre"><span>Water  Life</span></a>
 		</div>
 		<div class="MenuCategory">
-			<a class="SousMenu" href="home.php"><span>HOME</span></a>
-			<a class="SousMenu" href="products.php"><span>PRODUCTS</span></a>
-			<a class="SousMenu" href="recherche.php"><span>SEARCH</span></a>
-			<a class="SousMenu" href="cart.php"><span>CART</span></a>
-			<a class="SousMenu" href="signin.php"><span>MY ACCOUNT</span></a>
+			<a class="SousMenu" href="home.php" <?php if ($page_en_cours == 'menu_accueil') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/accueil.png">&nbsp;<span>Accueil</span>
+			</a>
+
+			<a class="SousMenu" href="products.php" <?php if ($page_en_cours == 'menu_produits') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/bouteille.png">&nbsp;<span>Produits</span>
+			</a>
+
+			<a class="SousMenu" href="recherche.php" <?php if ($page_en_cours == 'menu_rechercher') {echo ' id="menu-en-cours"';} ?>>
+				<img class="icon_menu" src="icons/chercher.png">&nbsp;<span>Rechercher</span>
+			</a>
+
+			<!-- On vérifie si l'utilisateur est connecté ou non, si OUI, on affiche l'onglet panier, si NON, on affiche rien -->
+			<?php
+            if(isset($_SESSION['login']))
+            {
+            ?>
+
+            <a class="SousMenu" href="cart.php" <?php if ($page_en_cours == 'menu_panier') {echo ' id="menu-en-cours"';} ?>>
+            	<img class="icon_menu" src="icons/caddie.png">&nbsp;<span>Panier</span>
+            </a>
+
+            <a class="SousMenu" href="monCompte.php" <?php if ($page_en_cours == 'menu_moncompte') {echo ' id="menu-en-cours"';} ?>>
+            	<img class="icon_menu" src="icons/utilisateur.png">&nbsp;<span>Mon Compte</span>
+            </a>
+
+            <a class="SousMenu" id="deconnexion" href="deconnexion.php"><img class="icon_menu" src="icons/deconnexion.png">&nbsp;<span>Déconnexion</span></a>
+
+            <?php 
+        	}
+        	else
+        	{
+        	?>
+
+			<a class="SousMenu" href="connexion.php" <?php if ($page_en_cours == 'menu_connexion') {echo ' id="menu-en-cours"';} else { echo 'id=connexion';} ?>>
+				<img class="icon_menu" src="icons/entrer.png">&nbsp;<span>Connexion</span>
+			</a>
+
+			<?php } ?>
 		</div>
 	</div>
 </header>

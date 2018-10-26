@@ -1,67 +1,37 @@
-@font-face {
-    font-family: 'SoftLine';
-    src: url('../fonts/SoftLine.otf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams';
-    src: url('../fonts/CaviarDreams.ttf') ;
-}
-@font-face {
-    font-family: 'CaviarDreams_Bold';
-    src: url('../fonts/CaviarDreams_Bold.ttf') ;
-}
-
-
-body{
+.body{
 	font-family:"CaviarDreams";	
 	margin : 0;
+
 }
 
 .navSection nav {
 	 position: sticky;
-
 }
 
-
-body nav {
+.body nav {
     border-radius: 5px 5px;
-   
     top: 0;
     left:0;
     width: 100%;
     z-index: 1; /*pr placer tout au dessus*/
 }
-body section{
+.body section{
 	background-color: rgb(252, 254, 255);
 }
 
-body img{
-	display: block;
-	max-height:400px;
-	max-width:300px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-body img:hover{
-	opacity: 0.7;
-
-	
-}
-
-body ul {
+.body ul {
    	list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
     font-family: 'CaviarDreams_Bold',arial;  
-    
 }
-body li {
+
+.body li {
    float: left;
 }
-body li a {
+.body li a {
 	display: inline;
     display: block;
     color: white;
@@ -69,33 +39,70 @@ body li a {
     padding: 14px 16px;
     text-decoration: none;
 }
-body li a:hover {
+.body li a:hover {
     background-color: #111;
 }
 
+.img{
+    display: block;
+    max-height:405px;
+    max-width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: .3s ease;
+    backface-visibility: hidden;
 
-.legende{
-	display: none;
-	width: 190px;
-    height: 100px;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid rgb(55, 38, 110); 
+}
+
+.fiche_bouteille{
+    width: 50%;
+    position: relative;
+}
+
+
+.donnees .legende{
+  opacity: 0;
+  position: absolute;
+ 
+  top: -10%;
+  left: 50%;
+ 
+  width: 170px;
+  height: 75px;
+  transform: translate(-50%, 400%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+   border-radius: 8px;
+   border: 2px solid rgb(55, 38, 110); 
+   padding: 7px; 
+   background-color: rgb(222, 253, 255); /* Green */
+   color: black;
+   transition: .5s;
    
 }
 
-.image:hover .legende {
-	display: block;
-	position: absolute;
-	background-color: #e7e7e7;
-
-
+.donnees:hover .legende{
+    opacity: 1;
+    height: 14%;
 
 }
 
-.row{
+.img:hover{
+    opacity: 0.7;
+}
+
+.produit {
 	display:  flex;
-	justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+
+}
+.produit > *{
+     flex: 25%;
+   
 }
 
 .price{
@@ -134,7 +141,7 @@ body li a:hover {
 }
 
 
-body h1{
+.body .h1{
 	font-family: 'SoftLine',arial;
 	text-align: center;
 	margin: 0px;
@@ -142,7 +149,7 @@ body h1{
 	color :rgb(55, 38, 110) ;
 }
 
-body h4{
+.body h4{
 	text-align: center;
 	color :rgb(151, 170, 179) ;
 	font-size: 200%;
