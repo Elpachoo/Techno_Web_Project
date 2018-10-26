@@ -7,7 +7,8 @@
 
 .logo_div
 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .logo_div > a
@@ -15,14 +16,71 @@
 	margin: 20px;
 }
 
-.logo_a:hover
-{
-	background-color: #FCFEFF;
-}
-
 .copyright_footer
 {
 	font-family: CaviarDreams;
 	font-weight: bold;
 	text-align: center;
+}
+
+.logo 
+{
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  font-family: CaviarDreams_bold;
+}
+
+.logo img 
+{
+  height: 100%;
+}
+
+.overlay 
+{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  align-items: center;
+}
+
+.overlay:hover 
+{
+  opacity: 1;
+}
+
+#overlay-twitter
+{
+  background-color: #55ACEE;
+}
+
+#overlay-facebook
+{
+  background-color: #3B5998;
+  font-size: 83%;
+}
+
+#overlay-youtube
+{
+  background-color: #D42428; 
+  font-size: 95%;
+}
+
+#overlay-google
+{
+  background-color: #40A459;
 }
