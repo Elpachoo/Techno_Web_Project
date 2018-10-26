@@ -12,19 +12,10 @@
 	<!-- Indication de la page dans laquelle on se trouve -->
 	<?php $page_en_cours = 'none'; ?>
 
-	<?php include("header.php"); ?> 
+	 
 
 	<body class="bodyProduct">
-		<!-------------------connexion sql-------------------------->
-		<?php // On se connecte à MySQL
-	      try{
-	        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
-	      }
-	      catch(Exception $e){
-	        // En cas d'erreur, on affiche un message et on arrête tout
-	        die('Erreur : '.$e->getMessage());
-	      }
-	    ?>
+
 	    <!-------------------FIN connexion sql-------------------------->
 
 		<?php  // on va chercher les infos dans la bdd
@@ -95,37 +86,21 @@
 
 						<div class="number-input">
 							<button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-							<form method="post" action="productPage.php?produit=<?php echo $_SESSION['marque'];?>">
+							<form method="post" action="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?>">
 								<input id="btnI" class="quantity" step="1" max="10" min="0"  name="quantity" value="0" type="number">	
 								<br><br>
-								<input id="btnA" class="boutonAjouter" type="submit" name="submit"  value="Ajouter au Panier" />
+								<input id="btnA" class="boutonAjouter" type="submit" name="submit_bouteille"  value="Ajouter au Panier" />
 							</form>
 							<button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
 						</div> <!--fin number-input -->
 						<br><br>
 						
-						<?php
-    						if(isset($_POST['submit'])){ // si formulaire soumis
-    						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL;
-    						$_SESSION['quantity_choice']=$truc;
-    						$req = $bdd->prepare('INSERT INTO panier(id_user, Marque, Quantite, Prix, Type, Materiau) VALUES(:id_user, :Marque, :Quantite, :Prix, :Type, :Materiau)');
-							$req->execute(array(
-							'id_user' => $_SESSION['id_user'],
-							'Marque' => $_SESSION['marque'],
-							'Quantite' => $_SESSION['quantity_choice'],
-							'Prix' => $_SESSION['prix'],
-							'Type' => $_SESSION['type'],
-							'Materiau' => $_SESSION['materiau']
-									));        			
-
-    					}
-    					$req->closeCursor();
-    					?>
+						
           		 
         				<?php  }else{   ?> <!--si on n'est pas co-->
         				
         				<div class="conn"> 
-        					<a class="connexionlien" href="connexion.php">
+        					<a class="connexionlien" href="index.php?page=connexion">
         						<div class="souligne"> Se connecter</div> pour accéder au panier 
         					</a>
         					<br>
@@ -142,7 +117,6 @@
 
 
 
-          <?php include('footer.php') ?>
 	</body>
 
 	

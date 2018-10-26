@@ -13,16 +13,14 @@
 <!-- Indication de la page dans laquelle on se trouve -->
 <?php $page_en_cours = 'menu_accueil'; ?>
 
-<!-- Ajout de l'header -->
-<?php include("header.php"); ?> 
 
 <body>
 	<div class="pub">
-		<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="products.php"><img src="pictures/promoeaux.jpg" class="promo"></a>
+		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
+		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
+		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
+		<a href="index.php?page=products><img src="pictures/promoeaux.jpg" class="promo"></a>
+		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
 	</div>
 </body>
 

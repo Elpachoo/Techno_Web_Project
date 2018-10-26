@@ -14,19 +14,9 @@
 <?php $page_en_cours = 'menu_produits'; ?>
 
   <!-- Ajout de l'header -->
-  <?php include("header.php"); ?> 
+  
 
   <body class="body">
-
-    <?php // On se connecte à MySQL
-      try{
-        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
-      }
-      catch(Exception $e){
-        // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
-      }
-    ?>
 
     <div class="navSection"> <!-- Englobe tout sauf header et footer -->
       <nav>
@@ -59,7 +49,7 @@
                 {
               ?>
               <div class="fiche_bouteille">              
-                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                   <div class=donnees>
                     <div class="legende"> <?php echo $donnees['Description']; ?></div>
                     <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -94,7 +84,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                    <div class=donnees>
                       <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                       <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -130,7 +120,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                    <div class=donnees>
                       <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                       <h4 > <?php echo $donnees['Marque'];  ?> </h4>
@@ -166,7 +156,7 @@
               ?>
               <div class="fiche_bouteille">              
                 <div class=image>
-                  <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                  <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                   <div class=donnees>
                     <div class="legende"> <?php echo $donnees['Description']; ?> </div>
                     <h4 > <?php echo $donnees['Marque'];  ?> </h4>

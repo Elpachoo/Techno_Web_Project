@@ -1,5 +1,14 @@
 <footer>
     <div class="footer">
+         <div id="conditions_generales">
+            <a href="#"><h1>CONDITIONS GENERALES</h1></a>
+        </div>
+        <div id="Mentions_legales">
+            <a href="mentions-legales.php"><h1>MENTIONS LEGALES</h1></a>         
+        </div>
+        <div id="support_client">
+            <a href="#"><h1>NOS PARTENAIRES</h1></a>
+        </div>
 
         <div class="logo_div">
             <a href="https://twitter.com/" class="logo">
@@ -29,20 +38,6 @@
                 </div>
                 <img src="pictures/logo_googlemaps.png" alt="Logo Google Maps"  title="Google Maps">
             </a>
-        </div>
-
-        <div class="div-liens">
-            <div class="liens" id="conditions-generales">
-                <a href="#">Conditions générales de vente</a>
-            </div>
-
-            <div class="liens" id="mentions-legales">
-                <a href="mentions-legales.php">Mentions légales</a>         
-            </div>
-
-            <div class="liens" id="support_client">
-                <a href="#">Nos partenaires</a>
-            </div>
         </div>
         <p class="copyright_footer">© 2018-2019 Water Life ® - Tous droits réservés</p>
     </div>

@@ -9,52 +9,27 @@
   <link rel="stylesheet" type="text/css" href="css/footer.css">
   <link rel="stylesheet" type="text/css" href="css/fonts.css">
 </head>
-<?php
-try
-{
-  // On se connecte à MySQL
-  $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-  // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
-}
-?>
+
 
 <!-- Indication de la page dans laquelle on se trouve -->
 <?php $page_en_cours = 'menu_panier'; ?>
 
 <!-- Ajout de l'header -->
-<header>
-	<?php include("header.php"); ?> 
-</header>
-
-<!--<?php echo $_SESSION['login'];
-  echo $_SESSION['id_user']; ?> -->
 
 <body class="body">
 	<div class="legende"> 
     <div class="Titre">
       <h1 class="h1"> Mon Panier </h1>
-      <?php
+<?php
                     if(isset($_POST['submit'])){
                               $truc=$_POST['quantity'];
-                              
+                              echo $truc;
                                $req = $bdd->prepare('UPDATE panier SET Quantite = :nvquantite WHERE id ='.$_SESSION['commandeid']);
                                 $req->execute(array(
                                 'nvquantite' => $truc                               
                                     ));
                               $req->closeCursor();
-                              } 
-                    if(isset($_POST['supprimer'])){
-                      $machin=$_POST['commandeid'];
-                        $req = $bdd->prepare('DELETE FROM panier WHERE id='.$_SESSION['commandeid']);
-                          $req->execute(array(
-                            'commandeid'=> $machin
-                          ));
-                    }
-                              ?>
+                              } ?>
     </div>
     <?php 
       $req=$bdd->query('SELECT panier.Prix*panier.Quantite AS pri, products.Description AS description,panier.Prix AS prix, panier.Marque AS marque_bouteille, panier.Quantite AS quantite,products.Image AS image, panier.id AS idcommande FROM panier,products WHERE panier.id_user ='.$_SESSION['id_user'].' and panier.Marque=products.Marque');
@@ -90,7 +65,7 @@ catch(Exception $e)
                             
                                 <button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
                         </div> <!--fin number-input --></td>
-                    <td><a href=""><img class="img" src="icons/poubelle.png" alt="supprimer" title="Supprimer du panier"/> </a></td>
+                    <td><a href=""><img class="img" src="icons/poubelle.png" alt="" title="Supprimer du panier"/> </a></td>
               </tr>
       </table>
       
@@ -109,8 +84,4 @@ catch(Exception $e)
     ?>
   </div> 
 </body>
-
-<!-- Ajout du footer -->
-<?php include('footer.php') ?>
-
 </html>

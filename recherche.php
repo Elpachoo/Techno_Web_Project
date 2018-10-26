@@ -10,22 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 
-<?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
-?>
 
 <!-- Indication de la page dans laquelle on se trouve -->
 <?php $page_en_cours = 'menu_rechercher'; ?>
 
-<!-- Ajout de l'header -->
-<?php include("header.php"); ?> 
+<!-- Ajout de l'header --> 
 
 <body class="bodyRecherche">
     <div id="bloc_page">
@@ -116,7 +105,5 @@ catch(Exception $e)
     </div>
 </body>
 
-<!-- Ajout du footer -->
-<?php include('footer.php') ?>
 
 </html>

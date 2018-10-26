@@ -1,0 +1,10 @@
+Afin de pouvoir tester l'intégralité des fonctions proposées par notre site vous pouvez vous connecter
+(en cliquant sur l'onglet connexion) à l'aide des identifiants suivant : 
+
+Login : Elpachoo
+Mot de passe : bouteille
+
+Vous avez bien évidemment la possibilité de vous créer votre propre compte en vous inscrivant comme membre
+(Pour cela, cliquer sur l'onglet 'Connexion', puis 'Vous inscrire' au bas de la page.
+
+(Attention à bien importer la base de données 'ecommerce' disponible dans le dossier !)

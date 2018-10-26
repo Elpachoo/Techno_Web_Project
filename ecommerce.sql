@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 14 oct. 2018 à 12:29
+-- Généré le :  ven. 26 oct. 2018 à 19:11
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -34,20 +34,25 @@ CREATE TABLE IF NOT EXISTS `panier` (
   `id_user` int(11) NOT NULL,
   `Marque` varchar(535) NOT NULL,
   `Quantite` int(11) NOT NULL,
-  `Prix` float NOT NULL,
+  `Prix` int(11) NOT NULL,
   `Type` varchar(535) NOT NULL,
   `Materiau` varchar(535) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `panier`
 --
 
 INSERT INTO `panier` (`id`, `id_user`, `Marque`, `Quantite`, `Prix`, `Type`, `Materiau`) VALUES
-(1, 1, 'Volvic', 1, 3.5, 'Plate', 'Plastique'),
-(2, 2, 'Evian', 1, 3.7, 'Plate', 'Plastique'),
-(3, 3, 'Perrier', 2, 10, 'Gazeuse', 'Plastique');
+(1, 1, 'Volvic', 1, 4, 'Plate', 'Plastique'),
+(2, 2, 'Evian', 1, 4, 'Plate', 'Plastique'),
+(3, 3, 'Perrier', 2, 10, 'Gazeuse', 'Plastique'),
+(15, 11, 'Vittel', 3, 4, 'Plate', 'Plastique'),
+(14, 1, 'Contrex', 3, 3, 'Plate', 'Plastique'),
+(13, 1, 'Evian', 2, 4, 'Plate', 'Plastique'),
+(10, 9, 'Ice Landic', 2, 50, 'Luxe', 'Ecailles de dragon'),
+(12, 1, 'Cristaline', 1, 3, 'Plate', 'Plastique');
 
 -- --------------------------------------------------------
 
@@ -109,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `CodePostal` int(11) NOT NULL,
   `Pays` varchar(535) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `user`
@@ -118,7 +123,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 INSERT INTO `user` (`Id`, `Nom`, `Prenom`, `Login`, `Password`, `Mail`, `PhoneNumber`, `Adresse`, `CodePostal`, `Pays`) VALUES
 (1, 'Ghys', 'Robin', 'Elpachoo', 'bouteille', 'robin.ghys@isen.yncrea.fr', 118218, 'rue de l\'isen', 59000, 'France'),
 (2, 'Haddadi', 'Giovanni', 'Giogio', 'bouteille2', 'giovanni.haddadi@isen.yncrea.fr', 111211, 'Allee des alouettes', 59000, 'Angleterre'),
-(3, 'Hermel', 'Jean', 'JeanJean', 'bouteille3', 'jean-alexis.hermel@isen.yncrea.fr', 5566, '10 rue moineau', 60000, 'France');
+(3, 'Hermel', 'Jean', 'JeanJean', 'bouteille3', 'jean-alexis.hermel@isen.yncrea.fr', 5566, '10 rue moineau', 60000, 'France'),
+(6, 'Dedeine', 'Leo', 'lele', 'sdf', 'sdfd', 123123, '10 rue dsf', 75000, 'Canada');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
