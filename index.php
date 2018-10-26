@@ -1,36 +1,27 @@
 <?php  session_start(); 
 
-include ('header.php'); 
+include ('view/header.php'); 
 
 include('database.php');
 
-if (isset($_GET['page']) && file_exists($_GET['page'].".php"))
+if (isset($_GET['page']))
 {	
-	$page=$_GET['page'].".php";
-	include $_GET['page'].".php";
-
-	if(isset($_POST['submit_bouteille']) && file_exists('submit_bouteille_to_cart.php'))
+	$page=$_GET['page'];
+	if(file_exists('view/'.$page.'.php'))
 	{
-		include('submit_bouteille_to_cart.php');
-	}
+		include ('view/'.$page.'.php');
 
-	if(isset($_POST['connexion_action']) && file_exists('connexion_action.php'))
+	}
+	
+	if(file_exists('action/'.$page.'.php'))
 	{
-		include('connexion_action.php');
-	}
-
-
-		if(isset($_POST['inscription_action']) && file_exists('inscription_action.php'))
-	{
-		include('inscription_action.php');
-	}
-
-
+		include ('action/'.$page.'.php');
+	}	
 } 
 
 else {
-	include 'home.php';
+	include ('view/home.php');
 }
 
-include ('footer.php');
+include ('view/footer.php');
 
