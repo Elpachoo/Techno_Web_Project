@@ -3,7 +3,7 @@
 
 	<div class="header">
 		<div class="logo_div">
-			<a href="home.php" class="titre"><span>Water  Life</span></a>
+			<a href="index.php?page=home" class="titre"><span>Water  Life</span></a>
 		</div>
 		<div class="MenuCategory">
 			<a class="SousMenu" href="index.php?page=home" >
