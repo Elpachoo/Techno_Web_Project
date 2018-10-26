@@ -11,10 +11,68 @@
 </head>
 
 <!-- Indication de la page dans laquelle on se trouve -->
-<?php $page_en_cours = 'none'; ?>
+<!--<?php $page_en_cours = 'none'; ?> -->
 
 <!-- Ajout de l'header -->
-<?php include("header.php"); ?> 
+<!--<?php include("header.php"); ?>  -->
+<?php
+		// si l'utilisateur appuie sur le bouton nommé "connexion" :
+		if(isset($_POST['inscription']))
+		{
+			$login = $_POST['login'];
+			$nom = $_POST['nom'];
+			$prenom = $_POST['prenom'];
+			$mdp = $_POST['mdp'];
+			$verifmdp = $_POST['verif-mdp'];
+			$mail = $_POST['mail'];
+			$verifmail = $_POST['verif-mail'];
+			$phone = $_POST['phone'];
+			$adresse=$_POST['adresse'];
+			$codepostal = $_POST['code-postal'];
+			$ville = $_POST['ville'];
+			$pays = $_POST['pays'];
+
+
+			// si les champs sont remplis alors :
+			if($login && $nom && $prenom && $mdp && $verifmdp && $mail && $verifmail && $phone && $adresse && $codepostal && $ville && $pays)
+			{
+				// on se connecte à MySql
+ // On se connecte à MySQL
+		      try{
+		        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
+		      }
+		      catch(Exception $e){
+		        // En cas d'erreur, on affiche un message et on arrête tout
+		        die('Erreur : '.$e->getMessage());
+		      }
+	    
+
+				// on crée notre requête
+				$req = $bdd->prepare('INSERT INTO user(Nom, Prenom, Login, Password, Mail, PhoneNumber, Adresse, CodePostal, Pays) VALUES(:nom, :prenom, :login, :password, :mail, :phonenumber, :adresse, :codepostal, :pays)');
+							$req->execute(array(
+							'nom' => $nom,
+							'prenom' => $prenom,
+							'login' => $login,
+							'password' => $mdp,
+							'mail' => $mail,
+							'phonenumber' => $phone, 
+							'adresse' => $adresse, 
+							'codepostal' => $codepostal,
+							'pays' => $pays
+									)); 
+							
+							header("Location: connexion.php");
+				}
+				
+
+				else echo " <div class='alert'>
+  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+  								Remplissez tous les champs s'il vous plaît !
+							</div> ";
+			$req->closeCursor();}
+
+		
+	?>
 
 <body>
 	<div class="inscription">
@@ -23,7 +81,7 @@
 				Inscription
 			</legend>
 
-			<form method="POST" action="monCompte.php">
+			<form method="POST" action="inscription.php">
 				<div class="champ-a-remplir" id="login">
 					<div class="div-icone">
 						<i class="icone"><img src="icons/login.png"></i>
