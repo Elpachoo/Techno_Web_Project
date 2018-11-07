@@ -1,5 +1,7 @@
 <?php
- // si formulaire soumis
+ // si formulaire soumis 
+						if(isset($_POST['submit_bouteille']))
+						{
     						$truc = !empty($_POST['quantity']) ? $_POST['quantity'] : NULL;
     						$_SESSION['quantity_choice']=$truc;
     						$req = $bdd->prepare('INSERT INTO panier(id_user, Marque, Quantite, Prix, Type, Materiau) VALUES(:id_user, :Marque, :Quantite, :Prix, :Type, :Materiau)');
@@ -14,4 +16,5 @@
 
     					
     					$req->closeCursor();
+    				}
     					?>

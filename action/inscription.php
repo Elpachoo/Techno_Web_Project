@@ -1,6 +1,8 @@
 <?php
 		// si l'utilisateur appuie sur le bouton nommé "connexion" :
-
+			
+			if(isset($_POST['inscription_action']))
+			{
 			$login = $_POST['login'];
 			$nom = $_POST['nom'];
 			$prenom = $_POST['prenom'];
@@ -46,4 +48,5 @@
 			$req->closeCursor();
 
 		
+	}
 	?>

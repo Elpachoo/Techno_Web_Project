@@ -20,16 +20,7 @@
 	<div class="legende"> 
     <div class="Titre">
       <h1 class="h1"> Mon Panier </h1>
-<?php
-                    if(isset($_POST['submit'])){
-                              $truc=$_POST['quantity'];
-                              echo $truc;
-                               $req = $bdd->prepare('UPDATE panier SET Quantite = :nvquantite WHERE id ='.$_SESSION['commandeid']);
-                                $req->execute(array(
-                                'nvquantite' => $truc                               
-                                    ));
-                              $req->closeCursor();
-                              } ?>
+
     </div>
     <?php 
       $req=$bdd->query('SELECT panier.Prix*panier.Quantite AS pri, products.Description AS description,panier.Prix AS prix, panier.Marque AS marque_bouteille, panier.Quantite AS quantite,products.Image AS image, panier.id AS idcommande FROM panier,products WHERE panier.id_user ='.$_SESSION['id_user'].' and panier.Marque=products.Marque');
@@ -57,9 +48,9 @@
                     <td><div class="number-input">
                                 <button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
                             <form method="post" action="">
-                                  <input id="btnI" class="quantity" step="1" max="10" min="0"  name="quantity" value="<?php echo $donnees['quantite']; ?>" type="number"> 
+                                  <input id="btnI" class="quantity" step="1" max="10" min="0"  name="modif_quantity" value="<?php echo $donnees['quantite']; ?>" type="number"> 
                             
-                                  <input id="btnA" class="boutonAjouter" type="submit" name="submit"  value="Modifier" />
+                                  <input id="btnA" class="boutonAjouter" type="submit" name="modif_quantity_action"  value="Modifier" />
                                   
                             </form>
                             

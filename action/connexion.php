@@ -1,4 +1,8 @@
-<?php $login = $_POST['login'];
+<?php 
+			
+			if(isset($_POST['connexion_action']))
+			{
+			$login = $_POST['login'];
 			$password = $_POST['mot_de_passe'];
 
 			// si les champs sont remplis alors :
@@ -31,5 +35,6 @@
   								Identifiant ou mot de passe incorrect
 							</div> ";
 
+			}
 			} ?> 
 			
