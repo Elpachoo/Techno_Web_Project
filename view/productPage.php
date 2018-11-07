@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-	    <title>Water Life</title>
-	    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-	    <link rel="stylesheet" type="text/css" href="css/header.css">
-	     <link rel="stylesheet"  href="css/productPage.css">
-	    <link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/productPage.css">
 	</head>
 
 	<!-- Indication de la page dans laquelle on se trouve -->
@@ -115,11 +110,6 @@
 		</div><!-- fin div containerProduit-->
 		<!-------------------fin bloc produit-------------------------->
 
-
-
 	</body>
-
-	
-
 
 </html>

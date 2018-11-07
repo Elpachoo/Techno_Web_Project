@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-	    <title>Water Life</title>
-	    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-	    <link rel="stylesheet" type="text/css" href="css/header.css">
 	    <link rel="stylesheet" href="css/monCompte.css">
-	    <link rel="stylesheet" href="css/footer.css">
 	</head>
 
 	<!-- Indication de la page dans laquelle on se trouve -->
