@@ -4,7 +4,7 @@
             <a href="#"><h1>CONDITIONS GENERALES</h1></a>
         </div>
         <div id="Mentions_legales">
-            <a href="mentions-legales.php"><h1>MENTIONS LEGALES</h1></a>         
+            <a href="index.php?page=mentions-legales"><h1>MENTIONS LEGALES</h1></a>         
         </div>
         <div id="support_client">
             <a href="#"><h1>NOS PARTENAIRES</h1></a>
