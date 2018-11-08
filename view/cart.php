@@ -14,20 +14,6 @@
 	<div class="legende"> 
     <div class="Titre">
       <h1 class="h1"> Mon Panier </h1>
-<<<<<<< HEAD
-
-=======
-<?php
-                if(isset($_POST['submit'])){
-                          $truc=$_POST['quantity'];
-                          echo $truc;
-                           $req = $bdd->prepare('UPDATE panier SET Quantite = :nvquantite WHERE id ='.$_SESSION['commandeid']);
-                            $req->execute(array(
-                            'nvquantite' => $truc                               
-                                ));
-                          $req->closeCursor();
-                          } ?>
->>>>>>> Dynamic_V2
     </div>
     <?php 
       $req=$bdd->query('SELECT panier.Prix*panier.Quantite AS pri, products.Description AS description,panier.Prix AS prix, panier.Marque AS marque_bouteille, panier.Quantite AS quantite,products.Image AS image, panier.id AS idcommande FROM panier,products WHERE panier.id_user ='.$_SESSION['id_user'].' and panier.Marque=products.Marque');
