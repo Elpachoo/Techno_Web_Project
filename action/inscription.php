@@ -16,9 +16,26 @@
 			$ville = $_POST['ville'];
 			$pays = $_POST['pays'];
 
+			$req = $bdd->query('SELECT Login from user');
+			while($donnees=$req->fetch())
+			{
+
+
+				if($login == $donnees['Login'])
+				{
+					$flag=true;
+				}
+
+				else
+				{
+					$flag=false;
+				}
+			} 
+			$req->closeCursor();
+
 
 			// si les champs sont remplis alors :
-			if($login && $nom && $prenom && $mdp && $verifmdp && $mail && $verifmail && $phone && $adresse && $codepostal && $ville && $pays)
+			if($login && $nom && $prenom && $mdp && $verifmdp && $mail && $verifmail && $phone && $adresse && $codepostal && $ville && $pays && $flag)
 			{
 				// on se connecte à MySql
  // On se connecte à MySQL
@@ -43,7 +60,7 @@
 
 				else echo " <div class='alert'>
   								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-  								Remplissez tous les champs s'il vous plaît !
+  								Remplissez tous les champs s'il vous plaît !<br> Si ceux-ci sont bien remplis, l'inscription a échoué car votre Login est déja utilisé, veuillez en choisir un autre s'il vous plaît !
 							</div> ";
 			$req->closeCursor();
 

@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />
+	<title>Water Life</title>
+    <link rel="icon" href="pictures/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="css/recherche.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 
 
@@ -26,7 +32,7 @@
                 {
                 ?>
 
-            	<form method="post" action="recherche.php">
+            	<form method="post" action="index.php?page=recherche">
                 	<input class="champ" type="text" name="recherche" placeholder="Exemple: Evian.."/>
                 	<input class="bouton" type="submit" name="submit" src="pictures/search2.png" value="valider"  /> 
                 	
@@ -42,7 +48,7 @@
                     $req->execute(array($_POST['recherche'])); 
                 ?>
 
-                <form method="post" action="recherche.php">
+                <form method="post" action="index.php?page=recherche">
                     <input class="champ" type="text" name="recherche" placeholder="Exemple: Evian.."/>
                     <input class="bouton" type="submit" name="submit" src="pictures/search2.png" value="valider"  /> 
                 </form>
