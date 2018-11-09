@@ -17,6 +17,16 @@ body
     font-family: CaviarDreams_bold;
 }
 
+.estConnect
+{
+    font-size: 25px;
+    padding: 20px;
+    background-color: #8ED4E8;
+    color: white;
+    text-align: center;
+    font-family: CaviarDreams_bold;
+}
+
 .closebtn
 {
     margin-left: 15px;
@@ -201,15 +211,4 @@ fieldset
     font-family: CaviarDreams_bold;
     font-weight: bold;
     text-decoration: none;
-}
-
-
-.estConnect
-{
-    font-size: 25px;
-    padding: 20px;
-    background-color: #8ED4E8;
-    color: black;
-    text-align: center;
-    font-family: CaviarDreams_bold;
 }

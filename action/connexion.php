@@ -1,44 +1,53 @@
 <?php 
-			
-			if(isset($_POST['connexion_action']))
+			function bandeau_informations()
 			{
-			$login = $_POST['login'];
-			$password = $_POST['mot_de_passe'];
+				$message_bandeau = "";
 
-			// si les champs sont remplis alors :
-			if($login && $password)
-			{
-				// on se connecte à MySql
-				$connect = mysqli_connect('localhost', 'root','', 'ecommerce');
-
-				// on crée notre requête
-				$req = "SELECT * FROM user WHERE Login = '$login' && Password = '$password'";
-
-				// on envoie la requête
-				$res = mysqli_query($connect, $req);
-
-				$count = mysqli_num_rows($res);
-
-				if($count == 1)
+				if(isset($_POST['connexion_action']))
 				{
+					$login = $_POST['login'];
+					$password = $_POST['mot_de_passe'];
 
-					if ($row = $res->fetch_assoc()) 
+					// si les champs sont remplis alors :
+					if($login && $password)
 					{
-        			$_SESSION['login'] = $row['Login'];
-        			$_SESSION['id_user'] = $row['Id'];
+						// on se connecte à MySql
+						$connect = mysqli_connect('localhost', 'root','', 'ecommerce');
 
-        			echo " <div class='estConnect'>
-  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-  								Vous êtes bien connecté, vous pouvez retourner sur la page Produit !
-							</div> "; 
-    				}
+						// on crée notre requête
+						$req = "SELECT * FROM user WHERE Login = '$login' && Password = '$password'";
 
-				}
-					else echo " <div class='alert'>
-  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
-  								Identifiant ou mot de passe incorrect
-							</div> ";
+						// on envoie la requête
+						$res = mysqli_query($connect, $req);
 
-			}
-			} ?> 
+						$count = mysqli_num_rows($res);
+
+						if($count == 1)
+						{
+							if ($row = $res->fetch_assoc()) 
+							{
+			        			$_SESSION['login'] = $row['Login'];
+			        			$_SESSION['id_user'] = $row['Id'];
+
+			        			$message_bandeau = " <div class='estConnect'>
+			  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+			  								Vous êtes bien connecté bien connecté !
+											</div> "; 
+		    				}
+						}
+
+						else 
+						{ 
+							$message_bandeau = " <div class='alert'>
+	  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+	  								Identifiant ou mot de passe incorrect
+								</div> ";
+						}
+					}
+				} 
+
+				return $message_bandeau;
+		}
+?> 
+
 			

@@ -1,6 +1,6 @@
-<!--<?php 
- session_start(); 
-?> -->
+<?php 
+	$message_bandeau = bandeau_informations();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,6 +18,7 @@
 	<!-- -->
 
 <body>
+	<?php echo $message_bandeau; ?>
 	<div class="connexion">
 		<fieldset>
 			<legend id="titre_connexion">
