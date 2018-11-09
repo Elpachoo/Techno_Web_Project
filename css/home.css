@@ -10,27 +10,46 @@ body, .pub
     text-decoration: none;
 }
 
-.imageEau {
 
-	background: url("../pictures/fond.png") no-repeat center center fixed; 
-  	
-  	background-size: cover;
-	
-	
-	
-	
+.couleur{
+  
+}
+.imageEau{
+    background-image:  url("../pictures/fond.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-
-
-.EauText {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.H1{
+  font-family: 'julian_thomas'; 
+  font-size: 70px;
+  margin: 0px;
+  padding-top: 0px;
   color: white;
+  text-shadow:  2px 5px #4b5e72;
 }
+.p{
+  font-family: 'julian_thomas'; 
+  font-size: 50px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-shadow: 2px 2px #1fc8db;
+}
+
+.EauText{
+  
+  height: 800px;
+  text-align: center;
+ 
+ 
+}
+
+
+
+
 
 
 

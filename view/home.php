@@ -7,11 +7,13 @@
 
 
 <body>
+	
 
-	<div class="imageEau">
+	<div class="imageEau" >
+
   		<div class="EauText">
-    		<h1 style="font-size:50px">L'eau dans 20-30 ans il n'y en aura plus.</h1>
-    		<p>JCVD</p>
+    		<div class="H1">"L'eau dans 20-30 ans, il n'y en aura plus."</div>
+    		<div class="p">JCVD</div>
    		</div>
 	</div>
 
