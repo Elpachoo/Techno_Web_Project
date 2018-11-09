@@ -54,11 +54,9 @@
       </table>
       
     </p> 
-    </div> <?php 
+    </div> 
 
-
-
-                            ?>    
+    <?php                             ?>    
                
     <?php 
     }
@@ -66,6 +64,7 @@
     
                               
     ?>
-  </div> 
+     <div class="prixTot"> Total : 30 €</div>
+  </div>
 </body>
 </html>

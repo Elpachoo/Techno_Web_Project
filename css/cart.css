@@ -166,3 +166,14 @@ input[type=number]::-webkit-outer-spin-button {
 	background-color: rgb(142, 212, 232); /* Green */
     color: white; 
 }
+
+.prixTot{
+  font-family: 'CaviarDreams_Bold';
+  font-size: 50px;
+  text-align: center;
+  margin: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #e7e7e7;
+  color: black; 
+}

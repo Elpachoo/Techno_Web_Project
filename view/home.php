@@ -6,13 +6,14 @@
 
 
 <body>
-	<div class="pub">
-		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
-		<a href="index.php?page=products"><img src="pictures/promoeaux.jpg" class="promo"></a>
+
+	<div class="imageEau">
+  		<div class="EauText">
+    		<h1 style="font-size:50px">L'eau dans 20-30 ans il n'y en aura plus.</h1>
+    		<p>JCVD</p>
+   		</div>
 	</div>
+
 </body>
 
 <!-- Ajout du footer -->

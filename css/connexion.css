@@ -202,3 +202,14 @@ fieldset
     font-weight: bold;
     text-decoration: none;
 }
+
+
+.estConnect
+{
+    font-size: 25px;
+    padding: 20px;
+    background-color: #8ED4E8;
+    color: black;
+    text-align: center;
+    font-family: CaviarDreams_bold;
+}

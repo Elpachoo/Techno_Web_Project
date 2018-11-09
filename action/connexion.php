@@ -26,7 +26,11 @@
 					{
         			$_SESSION['login'] = $row['Login'];
         			$_SESSION['id_user'] = $row['Id'];
-        			echo "Vous êtes bien connectes, suuuuper, cliquez sur accueil pour continuer vos achats et revenir sur la page d'accueil !"; 
+
+        			echo " <div class='estConnect'>
+  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+  								Vous êtes bien connecté, vous pouvez retourner sur la page Produit !
+							</div> "; 
     				}
 
 				}
