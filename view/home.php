@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
 <!-- Indication de la page dans laquelle on se trouve -->
 <?php $page_en_cours = 'menu_accueil'; ?>
 
