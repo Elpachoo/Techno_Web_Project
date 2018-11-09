@@ -27,7 +27,7 @@
                         <strong class="underligned"> Description </strong> :
                         <br><br>
                         <span class="lien"> 
-                             <a class="a" href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><?php echo $donnees['Marque']; ?></a>
+                             <a class="a" href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><?php echo $donnees['Marque']; ?></a>
                         </span>est une eau <?php echo $donnees['Type']; ?>,
                         contenue dans une bouteille en <?php echo $donnees['Materiau']; ?>
                         pour un prix de <?php echo $donnees['Prix']; ?> € l'unité, 
@@ -36,7 +36,7 @@
                    </p>
                    <?php $type= $donnees['Type']; ?>
 
-                   <a href="productPage.php?produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
+                   <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img" src="<?php echo $donnees['Image'];?>" alt="Product" /> </a>
                 </div>
                 <br> <br> <br>
 
@@ -53,7 +53,7 @@
                     {
                     ?>
 
-                    <a href="productPage.php?produit=<?php echo $reponse['Marque'];?> "><img class="img2" src="<?php echo $reponse['Image'];?>" alt="Product" /> </a>
+                    <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img2" src="<?php echo $reponse['Image'];?>" alt="Product" /> </a>
 
                      <?php }?>
                 </div>
