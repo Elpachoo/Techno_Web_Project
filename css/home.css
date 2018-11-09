@@ -1,0 +1,38 @@
+body, .pub
+{
+	margin: 0;
+}
+
+.promo
+{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.imageEau {
+	
+	width: 1920px;
+	height: 800px;
+	background: url("../pictures/fond.png") no-repeat;
+	
+	background-size: 1560px 770px;
+	
+	
+	
+}
+
+
+
+.EauText {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+
