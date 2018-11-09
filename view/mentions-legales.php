@@ -15,7 +15,7 @@
 <?php $page_en_cours = 'none'; ?>
 
 <!-- Ajout de l'header -->
-<?php include("header.php"); ?> 
+
 
 <body class="body">
 	<div class="body_div">
@@ -94,6 +94,6 @@
 </body>
 
 <!-- Ajout du footer -->
-<?php include('footer.php') ?>
+
 
 </html>

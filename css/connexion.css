@@ -17,6 +17,16 @@ body
     font-family: CaviarDreams_bold;
 }
 
+.estConnect
+{
+    font-size: 25px;
+    padding: 20px;
+    background-color: #8ED4E8;
+    color: white;
+    text-align: center;
+    font-family: CaviarDreams_bold;
+}
+
 .closebtn
 {
     margin-left: 15px;

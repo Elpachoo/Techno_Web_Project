@@ -14,3 +14,13 @@
     font-family: 'futur';
     src: url('../fonts/FUTRFW.ttf') ;
 }
+
+@font-face {
+    font-family: 'lol';
+    src: url('../fonts/lol.ttf') ;
+}
+
+@font-face {
+    font-family: 'julian_thomas';
+    src: url('../fonts/julian_thomas.ttf') ;
+}

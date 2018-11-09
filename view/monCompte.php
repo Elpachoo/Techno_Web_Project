@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-	    <title>Water Life</title>
-	    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-	    <link rel="stylesheet" type="text/css" href="css/header.css">
 	    <link rel="stylesheet" href="css/monCompte.css">
-	    <link rel="stylesheet" href="css/footer.css">
 	</head>
 
 	<!-- Indication de la page dans laquelle on se trouve -->
-	<?php $page_en_cours = 'none'; ?>
+	<?php $page_en_cours = 'none'; ?> 
 
-	<?php include("header.php"); ?> 
 
 	<body class="bodymonCompte">
-		<!-------------------connexion sql-------------------------->
-		<?php // On se connecte à MySQL
-	      try{
-	        $bdd = new PDO('mysql:host=localhost;dbname=ecommerce;charset=utf8', 'root', '');
-	      }
-	      catch(Exception $e){
-	        // En cas d'erreur, on affiche un message et on arrête tout
-	        die('Erreur : '.$e->getMessage());
-	      }
-	    ?>
-	    <!-------------------FIN connexion sql-------------------------->
 
 		<?php  // on va chercher les infos dans la bdd
 		$req = $bdd->prepare('SELECT * FROM user WHERE Id = ?');
@@ -84,7 +67,5 @@
 
           
 	</body>
-
-	<?php include('footer.php') ?>
 
 </html>
