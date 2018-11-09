@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="css/connexion.css">
+
 <?php 
 			function bandeau_informations()
 			{

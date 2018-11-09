@@ -44,6 +44,8 @@
                                   <input id="btnI" class="quantity" step="1" max="10" min="0"  name="modif_quantity" value="<?php echo $donnees['total']; ?>" type="number"> 
                             
                                   <input id="btnA" class="boutonAjouter" type="submit" name="modif_quantity_action"  value="Modifier" />
+
+                                  <input type="hidden" name="id_commande"  id="idcommande" value="<?php echo $donnees['idcommande'];?>" >
                                   
                             </form>
                             
