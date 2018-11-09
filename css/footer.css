@@ -84,3 +84,24 @@
 {
   background-color: #40A459;
 }
+
+.div-liens
+{
+  display: flex;
+  justify-content: center;
+  font-family: CaviarDreams_bold;
+  margin-bottom: 50px;
+}
+
+.liens > a
+{
+  text-decoration: none;
+  margin: 20px;
+  color: white;
+  font-size: 32px;
+}
+
+.liens > a:hover
+{
+  color: red;
+}
