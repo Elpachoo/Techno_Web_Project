@@ -10,6 +10,7 @@ body
 	background-image: linear-gradient(to top, #77c1ba, #69c3c1, #58c5c8, #42c7d1, #1fc8db);
 	width: 100%;
 	font-family: 'CaviarDreams';	
+  
 }
 
 /* placement du containeur logo */
@@ -34,7 +35,7 @@ body
 {
   width: 100%;
   text-align: center;
-  margin-bottom: 15px; /* Décalle de 15px vers le haut les catégories */
+  margin-bottom: 30px; /* Décalle de 15px vers le haut les catégories */
 }
 
 
