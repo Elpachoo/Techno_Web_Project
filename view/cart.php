@@ -66,7 +66,16 @@
     
                               
     ?>
-     <div class="prixTot"> Total : 30 €</div>
+    <div class="prixTot"> Total : 30 €
+
+      <form method="POST" action="index.php?page=validation-commande">
+        <button type="submit" class="bouton-valide-commande" value="Submit" name="validation_action">
+          <span id="bouton-inscription">Valider la commande</span>
+        </button>
+      </form>
+
+    </div>
+
   </div>
 </body>
 </html>

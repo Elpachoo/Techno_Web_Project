@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="css/connexion.css">
-
 <?php 
 			function bandeau_informations()
 			{
@@ -30,6 +28,8 @@
 							{
 			        			$_SESSION['login'] = $row['Login'];
 			        			$_SESSION['id_user'] = $row['Id'];
+
+			        			header("Location:index.php?page=monCompte");
 
 			        			$message_bandeau = " <div class='estConnect'>
 			  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
