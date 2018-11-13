@@ -41,7 +41,7 @@
                     <td><div class="number-input">
                                 <button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
                             <form method="post" action="">
-                                  <input id="btnI" class="quantity" step="1" max="10" min="0"  name="modif_quantity" value="<?php echo $donnees['total']; ?>" type="number"> 
+                                  <input id="btnI" class="quantity" step="1" max="10" min="1"  name="modif_quantity" value="<?php echo $donnees['total']; ?>" type="number"> 
                             
                                   <input id="btnA" class="boutonAjouter" type="submit" name="modif_quantity_action"  value="Modifier" />
 
