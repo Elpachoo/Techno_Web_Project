@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Commande validé !</title>
+	<title>Commande validée !</title>
 	    <link rel="stylesheet" href="css/commandeValide.css">
 </head>
-<body class="body">
-	<div class="legende">
-		<div class="Titre">
-			<h1 class="h1"> Commande validée </h1>
-				<div>
-					<?php  
-					$req = $bdd->prepare('SELECT * FROM user, panier WHERE Id = ?');
-					$req -> execute(array($_SESSION['id_user']));
+<body class="bodycommandeValidee">
+	<?php  // on va chercher les infos dans la bdd
+		$req = $bdd->prepare('SELECT * FROM user WHERE Id = ?');
+		$req -> execute(array($_SESSION['id_user']));
 
-						while($donnees=$req->fetch())
+		while($donnees=$req->fetch())
             {
-					?> 
-    					<div class="conteneur">
-    						<p>
-    							<table>
-    								<tr>
-    									<th class="">Votre date de livraison estimée est :
-    										<br> 24 Decembre 2018 à 00h00
-    									</th>
-    									<th>Votre commande a été expediée à votre adresse :</th>
-    								</tr>
-    								<tr>
-    									<td> </td>
-    									<td>Fiche client:
-    										<div class="infosClient">
-												<div class="bloc">
-													<h3 class=titreNom> Nom : <?php echo $donnees['Nom'];?></h3>	
-												</div>
-												<div class="bloc">
-													<h3 class=titrePrenom> Prenom : <?php echo $donnees['Prenom'];?> </h3>
-												</div>
-												<div class="bloc">
-													<h3 class=titreAdresse> Adresse : <?php echo $donnees['Adresse'];?> </h3>
-												</div>
-												<div class="bloc">
-													<h3 class=titreCode> Code Postal : <?php echo $donnees['CodePostal'];?> </h3>
-												</div>
-												<div class="bloc">
-													<h3 class=titrePays> Pays : <?php echo $donnees['Pays'];?> </h3>
-												</div>
-											</div>
-
-    									</td>
-    								</tr>
-    							</table>
-    						</p>
-    					</div>
-    					<div class="text">
-    						<h3 class="h3">On vous rappelle que votre commande est composée de (Quantité) bouteille de (Marque) </h3>
-    					</div>
-				</div>
+		?> 
+		<div class="titrecommande">
+			<h1 class="h1"> Commande Validée !</h1>
 		</div>
-	</div>
-	<?php 
-    }
-    $req->closeCursor();
-    
-                              
-    ?>
+
+
+		<div class="conteneur1">
+			<h3 class="h3"> Merci <?php echo $donnees['Login']; ?> de nous avoir fais confiance, votre commande vient d'être expediée et arrivera dans de très court délais! Veuillez verifier si vos différentes informations sont exactes : </h3>
+
+			<div class="infosGauche">
+			<div class="info">
+				<h3 class="soustitre"> Nom </h3>
+				<span class="span"> <?php echo $donnees['Nom']; ?></span>
+			</div>
+
+			<div class="info">
+				<h3 class="soustitre"> Prénom </h3>
+				<span class="span"> <?php echo $donnees['Prenom']; ?></span>
+			</div>
+			</div>
+
+
+			<div class="infosGauche">
+			<div class="info">
+				<h3 class="soustitre"> Adresse </h3>
+				<span class="span"> <?php echo $donnees['Adresse']; ?></span>
+			</div>
+
+			<div class="info">
+				<h3 class="soustitre"> Code postal </h3>
+				<span class="span"> <?php echo $donnees['CodePostal']; ?></span>
+			</div>
+
+			<div class="info">
+				<h3 class="soustitre"> Pays </h3>
+				<span class="span"> <?php echo $donnees['Pays']; ?></span>
+			</div>
+			</div>
+
+
+
+		</div>
+
+		<div class=""></div>
+
+		<?php 
+            }
+            $req->closeCursor();
+        ?>
+	
 </body>
 </html>
