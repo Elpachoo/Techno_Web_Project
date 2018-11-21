@@ -82,7 +82,7 @@
 						<div class="number-input">
 							<button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
 							<form method="post" action="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?>">
-								<input id="btnI" class="quantity" step="1" max="10" min="0"  name="quantity" value="0" type="number">	
+								<input id="btnI" class="quantity" step="1" max="9" min="1"  name="quantity" value="1" type="number">	
 								<br><br>
 								<input id="btnA" class="boutonAjouter" type="submit" name="submit_bouteille"  value="Ajouter au Panier" />
 							</form>
