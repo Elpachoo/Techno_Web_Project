@@ -18,7 +18,7 @@
 
 
 		<div class="conteneur1">
-			<h3 class="h3"> Merci <?php echo $donnees['Login']; ?> de nous avoir fais confiance, votre commande vient d'être expediée et arrivera dans de très court délais! Veuillez verifier si vos différentes informations sont exactes : </h3>
+			<h3 class="h3"> Merci <?php echo $donnees['Login']; ?> de nous avoir fais confiance, votre commande vient d'être expediée et arrivera avant que vous ayez le temps de dire ouf! Veuillez verifier si vos différentes informations sont exactes : </h3>
 
 			<div class="infosGauche">
 			<div class="info">
