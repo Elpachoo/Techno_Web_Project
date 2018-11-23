@@ -71,28 +71,32 @@
 						<br><br><br>
 
 						<?php //SI on est connecte
-            				if(isset($_SESSION['login']))
-           					{
-            			?>
-						<div class = quantite>
-							<h3 class="h3"> Quantité </h3>
-							<br><br><br>
-						</div>
+            				if (isset($_SESSION['login']))
+            				{
+            					if ($_SESSION['quantite']!=0)
+		           					{
+		            			?>
+								<div class = quantite>
+									<h3 class="h3"> Quantité </h3>
+									<br><br><br>
+								</div>
 
-						<div class="number-input">
-							<button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
-							<form method="post" action="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?>">
-								<input id="btnI" class="quantity" step="1" max="9" min="1"  name="quantity" value="1" type="number">	
+								<div class="number-input">
+									<button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+									<form method="post" action="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?>">
+										<input id="btnI" class="quantity" step="1" max="9" min="1"  name="quantity" value="1" type="number">	
+										<br><br>
+										<input id="btnA" class="boutonAjouter" type="submit" name="submit_bouteille"  value="Ajouter au Panier" />
+									</form>
+									<button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
+								</div> <!--fin number-input -->
 								<br><br>
-								<input id="btnA" class="boutonAjouter" type="submit" name="submit_bouteille"  value="Ajouter au Panier" />
-							</form>
-							<button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
-						</div> <!--fin number-input -->
-						<br><br>
-						
-						
+							<?php }else{?>
+								<div class="number-input">
+									<h3 class="h3"> Arrivage en cours </h3>
+								</div> <!--fin number-input -->
           		 
-        				<?php  }else{   ?> <!--si on n'est pas co-->
+        				<?php  }}else{   ?> <!--si on n'est pas co-->
         				
         				<div class="conn"> 
         					<a class="connexionlien" href="index.php?page=connexion">
