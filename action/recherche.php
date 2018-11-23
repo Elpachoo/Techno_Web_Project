@@ -40,20 +40,21 @@
                 </div>
                 <br> <br> <br>
 
+                <?php $req->closeCursor(); ?>
                  <strong class="underligned2"> D'autres produits que vous pourriez aimer : </strong> 
 
 
                 <div class="produitsup">
 
                     <?php 
-                        $req = $bdd->prepare('SELECT * FROM products WHERE Type = ? ORDER BY RAND() LIMIT 3');
+                        $req = $bdd->prepare('SELECT Marque, Image FROM products WHERE Type = ? ORDER BY RAND() LIMIT 3');
                         $req->execute(array($type)); 
 
                     while ($reponse = $req->fetch())
                     {
                     ?>
 
-                    <a href="index.php?page=productPage&produit=<?php echo $donnees['Marque'];?> "><img class="img2" src="<?php echo $reponse['Image'];?>" alt="Product" /> </a>
+                    <a href="index.php?page=productPage&produit=<?php echo $reponse['Marque'];?> "><img class="img2" src="<?php echo $reponse['Image'];?>" alt="Product" /> </a>
 
                      <?php }?>
                 </div>
