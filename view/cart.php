@@ -59,7 +59,7 @@
 
                        <input type="hidden" name="id_commande2"  id="idcommande2" value="<?php echo $donnees['idcommande'];?>" >
                     </form>
-                    
+
               </tr>
       </table>
       
@@ -80,9 +80,7 @@
         <button type="submit" class="bouton-valide-commande" value="Submit" name="validation_action">
           <span id="bouton-inscription">Valider la commande</span>
 
-           <input id="btnC" class="boutonValider" type="submit" name="Valid_cart_action"  value="" />
-
-            <input type="hidden" name="id_commande3"  id="idcommande3" value="<?php echo $_SESSION['id_user'];?>" >
+            <input type="hidden" name="id_commande3"  id="idcommande3" value="<?php echo $_SESSION['id_user'];?>" > 
 
         </button>
       </form>
