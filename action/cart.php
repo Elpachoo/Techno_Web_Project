@@ -9,3 +9,13 @@
                                     ));
                               $req->closeCursor();
                               } ?>
+
+                              <?php 
+					if(isset($_POST['delete_product_action'])) {
+						$tmp=$_POST['id_commande2'];
+						$req = $bdd->prepare('DELETE FROM panier WHERE id = :idcommandearg');
+						$req->execute(array( 
+							'idcommandearg' => $tmp));
+						$req->closeCursor();
+					}
+?>
