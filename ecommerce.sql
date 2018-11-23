@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 23 nov. 2018 à 12:57
+-- Généré le :  ven. 23 nov. 2018 à 13:05
 -- Version du serveur :  5.7.21
 -- Version de PHP :  5.6.35
 
@@ -45,12 +45,12 @@ CREATE TABLE IF NOT EXISTS `panier` (
 --
 
 INSERT INTO `panier` (`id`, `id_user`, `Marque`, `Quantite`, `Prix`, `Type`, `Materiau`) VALUES
-(1, 1, 'Volvic', 3, 4, 'Plate', 'Plastique'),
+(1, 1, 'Volvic', 7, 4, 'Plate', 'Plastique'),
 (2, 2, 'Evian', 1, 4, 'Plate', 'Plastique'),
 (3, 3, 'Perrier', 2, 10, 'Gazeuse', 'Plastique'),
-(26, 1, 'Perrier', 1, 5, 'Gazeuse', 'Plastique'),
+(26, 1, 'Perrier', 5, 5, 'Gazeuse', 'Plastique'),
 (25, 1, 'Vittel', 2, 4, 'Plate', 'Plastique'),
-(24, 1, 'Voss', 2, 75, 'Luxe', 'Obsidienne');
+(24, 1, 'Voss', 1, 75, 'Luxe', 'Obsidienne');
 
 -- --------------------------------------------------------
 
@@ -76,19 +76,19 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `Prix`, `Type`, `Materiau`, `Quantite`, `Marque`, `Description`, `Image`) VALUES
-(1, 2.7, 'Plate', 'Plastique', 100, 'Cristaline', 'La meilleure eau', 'pictures/cristaline.png'),
-(2, 3.5, 'Plate', 'Plastique', 100, 'Volvic', 'Eau prélevée à la source', 'pictures/volvic.png'),
-(3, 3.7, 'Plate', 'Plastique', 100, 'Evian', 'Evian c\'est ban', 'pictures/evian.png'),
-(4, 2.8, 'Plate', 'Plastique', 100, 'Contrex', 'L\'eau qui fait maigrir', 'pictures/contrex.png'),
-(5, 3.2, 'Plate', 'Plastique', 100, 'Plancoet', 'L\'eau qu\'on connaît pas', 'pictures/plancoet.png'),
-(6, 3.6, 'Plate', 'Plastique', 100, 'Vittel', 'Grosse gorgée, grosse bouteille', 'pictures/vittel.png'),
-(7, 1.8, 'Plate', 'Plastique', 100, 'Hépar', 'Hépardi, tu connais pas mon eau ?', 'pictures/hepart.png'),
+(1, 2, 'Plate', 'Plastique', 100, 'Cristaline', 'La meilleure eau', 'pictures/cristaline.png'),
+(2, 3, 'Plate', 'Plastique', 100, 'Volvic', 'Eau prélevée à la source', 'pictures/volvic.png'),
+(3, 3, 'Plate', 'Plastique', 100, 'Evian', 'Evian c\'est ban', 'pictures/evian.png'),
+(4, 2, 'Plate', 'Plastique', 100, 'Contrex', 'L\'eau qui fait maigrir', 'pictures/contrex.png'),
+(5, 3, 'Plate', 'Plastique', 100, 'Plancoet', 'L\'eau qu\'on connaît pas', 'pictures/plancoet.png'),
+(6, 3, 'Plate', 'Plastique', 100, 'Vittel', 'Grosse gorgée, grosse bouteille', 'pictures/vittel.png'),
+(7, 1, 'Plate', 'Plastique', 100, 'Hépar', 'Hépardi, tu connais pas mon eau ?', 'pictures/hepart.png'),
 (8, 5, 'Gazeuse', 'Plastique', 70, 'Perrier', 'Une bouteille fraîche, un citron, un moment parfait.', 'pictures/perrier.png'),
-(9, 5.5, 'Gazeuse', 'Plastique', 70, 'Badoit', 'Badoit et ses bulles, goûte comme c\'est bon !', 'pictures/badoit.png'),
-(10, 5.8, 'Gazeuse', 'Plastique', 70, 'Saint-Amand', 'Et oui, on existe aussi en version pétillante !', 'pictures/saintamand.png'),
-(11, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Fraise', 'C\'est LA meilleure boisson !', 'pictures/volvicfraise.png'),
-(12, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Citron', 'Ah non, c\'est moi LA boisson préférée de tous !', 'pictures/volviccitron.png'),
-(13, 4.1, 'Sucrées', 'Plastique', 50, 'Volvic Thé', 'La boisson préférée des pratiquants de yoga !', 'pictures/volvicthe.png'),
+(9, 5, 'Gazeuse', 'Plastique', 70, 'Badoit', 'Badoit et ses bulles, goûte comme c\'est bon !', 'pictures/badoit.png'),
+(10, 5, 'Gazeuse', 'Plastique', 70, 'Saint-Amand', 'Et oui, on existe aussi en version pétillante !', 'pictures/saintamand.png'),
+(11, 4, 'Sucrées', 'Plastique', 50, 'Volvic Fraise', 'C\'est LA meilleure boisson !', 'pictures/volvicfraise.png'),
+(12, 4, 'Sucrées', 'Plastique', 50, 'Volvic Citron', 'Ah non, c\'est moi LA boisson préférée de tous !', 'pictures/volviccitron.png'),
+(13, 4, 'Sucrées', 'Plastique', 50, 'Volvic Thé', 'La boisson préférée des pratiquants de yoga !', 'pictures/volvicthe.png'),
 (14, 35, 'Luxe', 'Cristal', 20, 'Saint Georges', 'Buvez un verre avec Georges et voyez vos forces décuplées.', 'pictures/stGeorge.png'),
 (15, 50, 'Luxe', 'Ecailles de dragon', 20, 'Ice Landic', 'Cette eau vous transformera en esquimau !', 'pictures/icelandic.png'),
 (16, 75, 'Luxe', 'Obsidienne', 10, 'Voss', 'Une eau invisible, vous ne la boirez pas, vous ne la sentirez pas, vous allez la vivre !', 'pictures/voss.png');
@@ -122,8 +122,7 @@ INSERT INTO `user` (`Id`, `Nom`, `Prenom`, `Login`, `Password`, `Mail`, `PhoneNu
 (1, 'Ghys', 'Robin', 'Elpachoo', 'bouteille', 'robin.ghys@isen.yncrea.fr', 118218, 'rue de l\'isen', 59000, 'France'),
 (2, 'Haddadi', 'Giovanni', 'Giogio', 'bouteille2', 'giovanni.haddadi@isen.yncrea.fr', 111211, 'Allee des alouettes', 59000, 'Angleterre'),
 (3, 'Hermel', 'Jean', 'JeanJean', 'bouteille3', 'jean-alexis.hermel@isen.yncrea.fr', 5566, '10 rue moineau', 60000, 'France'),
-(6, 'Dedeine', 'Leo', 'lele', 'sdf', 'sdfd', 123123, '10 rue dsf', 75000, 'Canada'),
-(12, 'Hazard', 'Eden', 'Edenou', 'bouteille', 'edendu62@gmail.com', 123456, '10 rue des belges', 235, 'Belgique');
+(6, 'Dedeine', 'Leo', 'lele', 'sdf', 'sdfd', 123123, '10 rue dsf', 75000, 'Canada');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
