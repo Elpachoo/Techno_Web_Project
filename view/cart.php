@@ -41,7 +41,7 @@
                     <td><div class="number-input">
                                 <button id="btnM" class="btnMoins" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
                             <form method="post" action="">
-                                  <input id="btnI" class="quantity" step="1" max="9" min="1"  name="modif_quantity" value="<?php echo $donnees['total']; ?>" type="number"> 
+                                  <input id="btnI" class="quantity" step="1" max="30" min="1"  name="modif_quantity" value="<?php echo $donnees['total']; ?>" type="number"> 
                             
                                   <input id="btnA" class="boutonAjouter" type="submit" name="modif_quantity_action"  value="Modifier" />
 
@@ -51,14 +51,17 @@
                             
                                 <button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
                         </div> <!--fin number-input --></td>
-                    <td><a href=""><img class="img" src="icons/poubelle.png" alt="" title="Supprimer du panier"/> </a></td>
+                    <td>
+                      <form method="post" action="">
 
-                    <form method="post" action="">
-
-                      <input id="btnB" class="boutonSupprimer" type="submit" name="delete_product_action"  value="Supprimer" />
+                      <input id="btnB" class="boutonSupprimer" value ="" type="submit" name="delete_product_action"  /> 
 
                        <input type="hidden" name="id_commande2"  id="idcommande2" value="<?php echo $donnees['idcommande'];?>" >
                     </form>
+
+                    </td>
+
+                    
 
               </tr>
       </table>
@@ -66,7 +69,7 @@
     </p> 
     </div> 
 
-    <?php                             ?>    
+    <?php  ?>    
                
     <?php 
     }
@@ -85,7 +88,7 @@
         </button>
       </form>
 
-      <p> ATTENTION, appuyer sur ce bouton vous fera valider définitivement votre commande et retirera tous les éléments de votre panier.</p>
+      <p class="attention"> ATTENTION, appuyer sur ce bouton vous fera valider définitivement votre commande et retirera tous les éléments de votre panier.</p>
 
     </div>
 
