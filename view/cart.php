@@ -74,13 +74,20 @@
     
                               
     ?>
-    <div class="prixTot"> Total : 30 €
+        <div class="prixTot"> 
 
       <form method="POST" action="index.php?page=commandeValide">
         <button type="submit" class="bouton-valide-commande" value="Submit" name="validation_action">
           <span id="bouton-inscription">Valider la commande</span>
+
+           <input id="btnC" class="boutonValider" type="submit" name="Valid_cart_action"  value="" />
+
+            <input type="hidden" name="id_commande3"  id="idcommande3" value="<?php echo $_SESSION['id_user'];?>" >
+
         </button>
       </form>
+
+      <p> ATTENTION, appuyer sur ce bouton vous fera valider définitivement votre commande et retirera tous les éléments de votre panier.</p>
 
     </div>
 
