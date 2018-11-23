@@ -52,6 +52,14 @@
                                 <button  id="btnP" class="btnPlus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" ></button>
                         </div> <!--fin number-input --></td>
                     <td><a href=""><img class="img" src="icons/poubelle.png" alt="" title="Supprimer du panier"/> </a></td>
+
+                    <form method="post" action="">
+
+                      <input id="btnB" class="boutonSupprimer" type="submit" name="delete_product_action"  value="Supprimer" />
+
+                       <input type="hidden" name="id_commande2"  id="idcommande2" value="<?php echo $donnees['idcommande'];?>" >
+                    </form>
+                    
               </tr>
       </table>
       
