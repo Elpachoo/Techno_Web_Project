@@ -54,7 +54,11 @@
 							'pays' => $pays
 									)); 
 							
-							echo "yes bien inscrit le sang";
+							
+							echo " <div class='alert'>
+  								<span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>
+  								Vous êtes bien inscrit !
+							</div> ";
 				}
 				
 
