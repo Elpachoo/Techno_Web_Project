@@ -23,12 +23,12 @@
 
 				if($login == $donnees['Login'])
 				{
-					$flag=true;
+					$flag=false;
 				}
 
 				else
 				{
-					$flag=false;
+					$flag=true;
 				}
 			} 
 			$req->closeCursor();
